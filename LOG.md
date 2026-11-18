@@ -48,3 +48,15 @@ NOT swapped (no repo copy and static.metricool.com is blocked from the session):
 Buffer: nothing added. LinkedIn, Facebook and X each already had 10 of 10 scheduled posts (pre-existing India/China lane posts through 23 Nov).
 Unused this run, keep for later Buffer slots: 18/19/20 A, B, C, D posters/cards above; article posts planned for customs-clearance-mistakes-kenya/, pre-shipment-inspection-china-to-kenya/, clearing-agent-at-jkia/.
 Already used on Buffer by earlier scheduling (avoid repeating within 4 weeks): india-to-kenya-freight-guide-fcl-lcl-air, exw-vs-fob-india-to-kenya, air-freight-india-to-kenya, how-to-calculate-landed-cost-in-kenya, china-to-kenya-freight-guide-fcl-lcl-air, india-vs-china-importing-to-kenya, clearing-agent-fcl-vs-lcl-kenya.
+
+## Scheduled this run (2026-11-18 14:43)
+Note: clearonlogistics.co.ke still blocked from the session (DNS not allowed); Claude Docs connector not available. No article figures used.
+Metricool (Instagram + TikTok): nothing added. Every slot on 18, 19 and 20 Nov already filled (19 and 20 Nov 10:00 now split into an Instagram-only .png post and a TikTok-only .jpg post, so no PNG swap needed). No combined IG+TikTok post uses .png.
+Buffer (all images reused from posters/, no new images made):
+- X 2026-11-18 17:00 — B itemised-quote (CTA) — https://clearonlogistics.co.ke/reading-a-clearing-agent-quote/
+- X 2026-11-18 20:00 — D myth-documents (myth vs fact) — question: do you check the drafts before your supplier ships?
+- Facebook 2026-11-18 20:00 — B itemised-quote (CTA) — reading-a-clearing-agent-quote/
+- LinkedIn 2026-11-19 17:00 — B china-quote-chat (CTA) — china-to-kenya-freight-guide-fcl-lcl-air/
+- LinkedIn 2026-11-20 17:00 — B talk-before-ship (CTA) — clearing-agent-at-mombasa-port/
+Buffer now at 10/10 on X, Facebook and LinkedIn.
+Still unused for later Buffer slots: 18 A bill-of-lading, 18 C term-teu, 19 A/C/D, 20 A/E; article posts planned for customs-clearance-mistakes-kenya/, pre-shipment-inspection-china-to-kenya/, clearing-agent-at-jkia/.

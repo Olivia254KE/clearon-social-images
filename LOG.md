@@ -32,3 +32,19 @@ Note (2026-11-18 run 1): clearonlogistics.co.ke could not be reached from the se
 - JPG copies made of posters 2026-11-17_week_2..6 for the Metricool posts on 18/19/20 18:00 and 21/22 10:00.
 
 ## Scheduled this run (2026-11-18 06:43)
+Metricool (Instagram + TikTok), all with JPG images from this repo:
+- 2026-11-18 13:00 — B itemised-quote (CTA) — link in bio → reading-a-clearing-agent-quote/
+- 2026-11-18 20:30 — E question-docs (question of the day)
+- 2026-11-19 07:30 — A container-types (educational) — link in bio → 40ft-container-china-to-kenya-landed-cost/
+- 2026-11-19 13:00 — B china-quote-chat (CTA) — link in bio → china-to-kenya-freight-guide-fcl-lcl-air/
+- 2026-11-19 20:30 — E quote-paperwork (quote card)
+- 2026-11-20 07:30 — A demurrage-detention (educational) — link in bio → china-cargo-arrival-mombasa-to-delivery/
+- 2026-11-20 13:00 — B talk-before-ship (CTA) — link in bio → clearing-agent-at-mombasa-port/
+- 2026-11-20 20:30 — E fill-blank (fill in the blank)
+- Skipped 2026-11-18 07:30 (less than 2h away at run time).
+PNG→JPG media swaps (existing posts, other fields unchanged): 18 Nov 18:00, 19 Nov 18:00, 20 Nov 18:00, 21 Nov 10:00, 22 Nov 10:00.
+NOT swapped (no repo copy and static.metricool.com is blocked from the session): 19 Nov 10:00 "EXW vs FOB … FOB price looked cheaper" and 20 Nov 10:00 "Air freight from India … 6 things". Both still use .png.
+
+Buffer: nothing added. LinkedIn, Facebook and X each already had 10 of 10 scheduled posts (pre-existing India/China lane posts through 23 Nov).
+Unused this run, keep for later Buffer slots: 18/19/20 A, B, C, D posters/cards above; article posts planned for customs-clearance-mistakes-kenya/, pre-shipment-inspection-china-to-kenya/, clearing-agent-at-jkia/.
+Already used on Buffer by earlier scheduling (avoid repeating within 4 weeks): india-to-kenya-freight-guide-fcl-lcl-air, exw-vs-fob-india-to-kenya, air-freight-india-to-kenya, how-to-calculate-landed-cost-in-kenya, china-to-kenya-freight-guide-fcl-lcl-air, india-vs-china-importing-to-kenya, clearing-agent-fcl-vs-lcl-kenya.

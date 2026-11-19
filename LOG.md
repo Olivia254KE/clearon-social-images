@@ -81,3 +81,21 @@ Buffer (X 8/10, Facebook 8/10, LinkedIn 9/10 before this run → now 10/10 each)
 - Facebook 2026-11-19 20:00 — 19 B china-quote-chat — china-to-kenya-freight-guide-fcl-lcl-air/
 - LinkedIn 2026-11-21 17:00 — 21 B send-drafts-india — indian-export-documents-kenya-importers/
 Still unused for later Buffer slots: 18 A bill-of-lading, 18 C term-teu, 19 C lcl-wm, 19 D spot-mistake, 20 A demurrage, 20 E fill-blank, 21 A/D/E; article posts planned: customs-clearance-mistakes-kenya/, pre-shipment-inspection-china-to-kenya/, clearing-agent-at-jkia/.
+
+## 2026-11-22 (Sun) — theme: compliance and documents
+- A poster `posters/2026-11-22_a_origin-passport.jpg` — educational: certificate of origin as the cargo's "passport" (states country where goods were produced; issued in the exporting country, usually by a chamber of commerce or authorised body; must agree with invoice and packing list). Layout: tilted passport booklet + stamp, three icon rows. General trade knowledge, no article figures. Link: certificate-of-origin-kenya-imports/
+- B, C, D, E: not yet made.
+- Article-link post: advance-cargo-declaration-kenya/ (LinkedIn 11:00)
+
+## Scheduled this run (2026-11-19 14:43)
+Push check: OK. clearonlogistics.co.ke still blocked for web fetch (DNS not allowed); no article figures used.
+Metricool (Instagram + TikTok): nothing added; 19, 20 and 21 Nov all full. No combined IG+TikTok post uses .png.
+Buffer (X 7/10, Facebook 8/10, LinkedIn 8/10 before → 10/10 each):
+- X 2026-11-19 20:00 — 19 D spot-mistake (spot the mistake) — question: call the supplier or the clearing agent first?
+- X 2026-11-20 08:00 — article link: customs-clearance-mistakes-kenya/
+- X 2026-11-20 10:30 — 20 A demurrage-detention — china-cargo-arrival-mombasa-to-delivery/
+- Facebook 2026-11-20 13:00 — 20 A demurrage-detention — question: which has caught you out? — china-cargo-arrival-mombasa-to-delivery/
+- Facebook 2026-11-20 20:00 — 20 B talk-before-ship — clearing-agent-at-mombasa-port/
+- LinkedIn 2026-11-22 11:00 — article link: advance-cargo-declaration-kenya/
+- LinkedIn 2026-11-22 13:00 — 22 A origin-passport — certificate-of-origin-kenya-imports/
+Still unused for later Buffer slots: 18 A bill-of-lading, 18 C term-teu, 19 C lcl-wm, 20 E fill-blank, 21 A/D/E. Article planned: pre-shipment-inspection-china-to-kenya/, clearing-agent-at-jkia/.

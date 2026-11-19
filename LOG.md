@@ -25,8 +25,13 @@ Note (2026-11-18 run 1): clearonlogistics.co.ke could not be reached from the se
 - E card `posters/2026-11-20_e_fill-blank.jpg` — fill in the blank: "My biggest import headache is ___"
 - Article-link post: how-to-calculate-landed-cost-in-kenya/
 
-## 2026-11-21 (Sat)
-- Article-link post (LinkedIn 11:00): clearing-agent-at-jkia/
+## 2026-11-21 (Sat) — theme: India lane
+- A poster `posters/2026-11-21_a_fcl-lcl-scale.jpg` — educational: FCL vs LCL on a balance scale (standard definitions: whole container vs shared container, consolidated at origin / split at destination). New layout: balance scale + two cards. Link: fcl-shipping-india-to-kenya-ports/
+- B poster `posters/2026-11-21_b_send-drafts-india.jpg` — CTA: send us your Indian supplier's drafts (commercial invoice, packing list, draft B/L, certificate of origin); paper-plane graphic, light background. Link: indian-export-documents-kenya-importers/
+- C card: not yet made (no slot needed it yet).
+- D card `posters/2026-11-21_d_term-cif.jpg` — term of the day: CIF (seller pays freight + minimum insurance to named destination port; risk passes once goods on board at origin; Incoterms definition). Teal.
+- E card `posters/2026-11-21_e_this-or-that.jpg` — this or that: one big shipment vs smaller, more often. Blue/navy split.
+- Article-link post (LinkedIn 11:00, pre-existing plan): clearing-agent-at-jkia/
 
 ## PNG→JPG swaps
 - JPG copies made of posters 2026-11-17_week_2..6 for the Metricool posts on 18/19/20 18:00 and 21/22 10:00.
@@ -60,3 +65,19 @@ Buffer (all images reused from posters/, no new images made):
 - LinkedIn 2026-11-20 17:00 — B talk-before-ship (CTA) — clearing-agent-at-mombasa-port/
 Buffer now at 10/10 on X, Facebook and LinkedIn.
 Still unused for later Buffer slots: 18 A bill-of-lading, 18 C term-teu, 19 A/C/D, 20 A/E; article posts planned for customs-clearance-mistakes-kenya/, pre-shipment-inspection-china-to-kenya/, clearing-agent-at-jkia/.
+
+## Scheduled this run (2026-11-19 06:43)
+Push check: OK. clearonlogistics.co.ke still not reachable from the session (DNS blocked); Claude Docs connector not available; fallback article list used, no article figures used.
+Metricool (Instagram + TikTok), new JPGs from this repo:
+- 2026-11-21 07:30 — A fcl-lcl-scale (educational) — link in bio → fcl-shipping-india-to-kenya-ports/
+- 2026-11-21 13:00 — B send-drafts-india (CTA) — link in bio → indian-export-documents-kenya-importers/
+- 2026-11-21 18:00 — D term-cif (term of the day) — question: have you bought on CIF and checked the insurance cover?
+- 2026-11-21 20:30 — E this-or-that (this or that)
+19 and 20 Nov already full; 21 Nov 10:00 already filled (India or China origins, reused). No combined IG+TikTok post uses .png.
+Buffer (X 8/10, Facebook 8/10, LinkedIn 9/10 before this run → now 10/10 each):
+- X 2026-11-19 10:30 — 19 A container-types — 40ft-container-china-to-kenya-landed-cost/
+- X 2026-11-19 17:00 — 19 B china-quote-chat — china-to-kenya-freight-guide-fcl-lcl-air/
+- Facebook 2026-11-19 13:00 — 19 A container-types — 40ft-container-china-to-kenya-landed-cost/
+- Facebook 2026-11-19 20:00 — 19 B china-quote-chat — china-to-kenya-freight-guide-fcl-lcl-air/
+- LinkedIn 2026-11-21 17:00 — 21 B send-drafts-india — indian-export-documents-kenya-importers/
+Still unused for later Buffer slots: 18 A bill-of-lading, 18 C term-teu, 19 C lcl-wm, 19 D spot-mistake, 20 A demurrage, 20 E fill-blank, 21 A/D/E; article posts planned: customs-clearance-mistakes-kenya/, pre-shipment-inspection-china-to-kenya/, clearing-agent-at-jkia/.

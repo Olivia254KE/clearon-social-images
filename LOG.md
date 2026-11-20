@@ -118,3 +118,24 @@ Buffer (X 8/10, Facebook 8/10, LinkedIn 9/10 before → 10/10 each):
 - Facebook 2026-11-21 20:00 — 21 B send-drafts-india — indian-export-documents-kenya-importers/
 - LinkedIn 2026-11-22 17:00 — 22 B green-light — clearing-agent-at-mombasa-port/
 Still unused for later Buffer slots: 18 A bill-of-lading, 18 C term-teu, 19 C lcl-wm, 21 D/E, 22 D/E. Article planned: pre-shipment-inspection-china-to-kenya/, clearing-agent-at-jkia/.
+
+## 2026-11-23 (Mon) — theme: China lane (inspection, terms, quoting)
+- A poster `posters/2026-11-23_a_inspection-check.jpg` — educational: pre-shipment inspection before cargo leaves China; four checks (quantity vs order, quality vs agreed spec/sample, packing and marks, invoice/packing list match the cartons); agree checks before paying the balance. Layout: isometric carton under a magnifying glass with a tick, four stacked check cards on the right, navy. General trade knowledge, no article figures. Link: pre-shipment-inspection-china-to-kenya/
+- B poster `posters/2026-11-23_b_three-things.jpg` — CTA: before you pay the deposit, send us three things (supplier location, cargo size, terms offered EXW or FOB) → funnel → route options + itemised quote. Light background, three numbered cards and a funnel. Link: exw-vs-fob-china-to-kenya/
+- C, D, E: not yet made (next run).
+- Article-link post already scheduled: india-vs-china-importing-to-kenya/ (LinkedIn 11:00, X 12:00, Facebook 10:00; pre-existing).
+
+## Scheduled this run (2026-11-20 14:43)
+Push check: OK. clearonlogistics.co.ke still blocked for web fetch (DNS not allowed); Claude Docs connector not available; no article figures used.
+Metricool (Instagram + TikTok): nothing added; 20, 21 and 22 Nov all full. No combined IG+TikTok post uses .png.
+Buffer (X 6/10, Facebook 8/10, LinkedIn 8/10 before → 10/10 each):
+- X 2026-11-21 10:30 — 21 A fcl-lcl-scale — fcl-shipping-india-to-kenya-ports/
+- X 2026-11-21 12:00 — 21 E this-or-that (this or that)
+- X 2026-11-21 17:00 — 21 B send-drafts-india — indian-export-documents-kenya-importers/
+- X 2026-11-21 20:00 — 21 D term-cif (term of the day)
+- Facebook 2026-11-22 13:00 — 22 A origin-passport — certificate-of-origin-kenya-imports/
+- Facebook 2026-11-22 17:00 — 22 E tip-description (quick tip)
+- LinkedIn 2026-11-23 13:00 — 23 A inspection-check — pre-shipment-inspection-china-to-kenya/
+- LinkedIn 2026-11-23 17:00 — 23 B three-things — exw-vs-fob-china-to-kenya/
+Facebook 2026-11-22 20:00 (22 B green-light) refused: 10/10 limit reached; next run.
+Still unused for later Buffer slots: 18 A bill-of-lading, 18 C term-teu, 19 C lcl-wm, 22 D term-hs-code, 22 B (Facebook), 23 A/B (X, Facebook). Article planned: clearing-agent-at-jkia/.

@@ -84,7 +84,10 @@ Still unused for later Buffer slots: 18 A bill-of-lading, 18 C term-teu, 19 C lc
 
 ## 2026-11-22 (Sun) — theme: compliance and documents
 - A poster `posters/2026-11-22_a_origin-passport.jpg` — educational: certificate of origin as the cargo's "passport" (states country where goods were produced; issued in the exporting country, usually by a chamber of commerce or authorised body; must agree with invoice and packing list). Layout: tilted passport booklet + stamp, three icon rows. General trade knowledge, no article figures. Link: certificate-of-origin-kenya-imports/
-- B, C, D, E: not yet made.
+- B poster `posters/2026-11-22_b_green-light.jpg` — CTA: get the green light before you ship / ask for an itemised quote. Layout: traffic light (red/amber/green stages: order paid no plan; drafts unchecked; documents checked, costs itemised, clearance planned). No figures. Link: clearing-agent-at-mombasa-port/
+- C slot (IG/TikTok 10:00): filled by pre-existing A/B/C poll "What's on your next shipment?" (FCL/LCL/Air).
+- D card `posters/2026-11-22_d_term-hs-code.jpg` — term of the day: HS code (Harmonized System; first six digits shared worldwide, countries add national digits; example 85 17 62 shown as chapter/heading/subheading). White with blue band. Question: do you know your product's HS code?
+- E card `posters/2026-11-22_e_tip-description.jpg` — quick tip: describe goods specifically on the invoice ("Garments" vs "Men's cotton shirts, long sleeve"). Teal/navy split. Question: how does your supplier describe your goods?
 - Article-link post: advance-cargo-declaration-kenya/ (LinkedIn 11:00)
 
 ## Scheduled this run (2026-11-19 14:43)
@@ -99,3 +102,19 @@ Buffer (X 7/10, Facebook 8/10, LinkedIn 8/10 before → 10/10 each):
 - LinkedIn 2026-11-22 11:00 — article link: advance-cargo-declaration-kenya/
 - LinkedIn 2026-11-22 13:00 — 22 A origin-passport — certificate-of-origin-kenya-imports/
 Still unused for later Buffer slots: 18 A bill-of-lading, 18 C term-teu, 19 C lcl-wm, 20 E fill-blank, 21 A/D/E. Article planned: pre-shipment-inspection-china-to-kenya/, clearing-agent-at-jkia/.
+
+## Scheduled this run (2026-11-20 06:43)
+Push check: OK. clearonlogistics.co.ke still blocked for web fetch (DNS not allowed); Claude Docs connector not available; no article figures used.
+Metricool (Instagram + TikTok), JPGs from this repo:
+- 2026-11-22 07:30 — A origin-passport (educational) — link in bio → certificate-of-origin-kenya-imports/
+- 2026-11-22 13:00 — B green-light (CTA, itemised quote)
+- 2026-11-22 18:00 — D term-hs-code (term of the day)
+- 2026-11-22 20:30 — E tip-description (quick tip)
+20 and 21 Nov already full; 22 Nov 10:00 already filled (A/B/C poll). No combined IG+TikTok post uses .png (20 Nov 10:00 IG-only post still .png; not in scope of the swap rule).
+Buffer (X 8/10, Facebook 8/10, LinkedIn 9/10 before → 10/10 each):
+- X 2026-11-20 17:00 — 20 B talk-before-ship — clearing-agent-at-mombasa-port/
+- X 2026-11-20 20:00 — 20 E fill-blank (fill in the blank)
+- Facebook 2026-11-21 13:00 — 21 A fcl-lcl-scale — fcl-shipping-india-to-kenya-ports/ — question: which do you use most?
+- Facebook 2026-11-21 20:00 — 21 B send-drafts-india — indian-export-documents-kenya-importers/
+- LinkedIn 2026-11-22 17:00 — 22 B green-light — clearing-agent-at-mombasa-port/
+Still unused for later Buffer slots: 18 A bill-of-lading, 18 C term-teu, 19 C lcl-wm, 21 D/E, 22 D/E. Article planned: pre-shipment-inspection-china-to-kenya/, clearing-agent-at-jkia/.

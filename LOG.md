@@ -122,7 +122,9 @@ Still unused for later Buffer slots: 18 A bill-of-lading, 18 C term-teu, 19 C lc
 ## 2026-11-23 (Mon) — theme: China lane (inspection, terms, quoting)
 - A poster `posters/2026-11-23_a_inspection-check.jpg` — educational: pre-shipment inspection before cargo leaves China; four checks (quantity vs order, quality vs agreed spec/sample, packing and marks, invoice/packing list match the cartons); agree checks before paying the balance. Layout: isometric carton under a magnifying glass with a tick, four stacked check cards on the right, navy. General trade knowledge, no article figures. Link: pre-shipment-inspection-china-to-kenya/
 - B poster `posters/2026-11-23_b_three-things.jpg` — CTA: before you pay the deposit, send us three things (supplier location, cargo size, terms offered EXW or FOB) → funnel → route options + itemised quote. Light background, three numbered cards and a funnel. Link: exw-vs-fob-china-to-kenya/
-- C, D, E: not yet made (next run).
+- C card `posters/2026-11-23_c_did-you-know-slac.jpg` — did you know: "Shipper's load and count" on a bill of lading means the carrier did not check what is inside the container; the shipper packed, counted and sealed it. White, blue pill label, drawn container with seal and eye-slash icon, navy question box. General shipping knowledge. Question: who checks your goods before the seal goes on?
+- D slot (IG/TikTok 18:00): filled by pre-existing "Ask before it ships" post (Metricool image).
+- E card `posters/2026-11-23_e_quote-factory-gate.jpg` — quote card: "Good shipments are decided at the factory gate, not the port gate." — Clearon Logistics. Teal background, big navy quote mark, factory → check → port line graphic. Question: what do you always check before goods leave the supplier?
 - Article-link post already scheduled: india-vs-china-importing-to-kenya/ (LinkedIn 11:00, X 12:00, Facebook 10:00; pre-existing).
 
 ## Scheduled this run (2026-11-20 14:43)
@@ -139,3 +141,20 @@ Buffer (X 6/10, Facebook 8/10, LinkedIn 8/10 before → 10/10 each):
 - LinkedIn 2026-11-23 17:00 — 23 B three-things — exw-vs-fob-china-to-kenya/
 Facebook 2026-11-22 20:00 (22 B green-light) refused: 10/10 limit reached; next run.
 Still unused for later Buffer slots: 18 A bill-of-lading, 18 C term-teu, 19 C lcl-wm, 22 D term-hs-code, 22 B (Facebook), 23 A/B (X, Facebook). Article planned: clearing-agent-at-jkia/.
+
+## Scheduled this run (2026-11-21 06:43)
+Push check: OK. clearonlogistics.co.ke still blocked for web fetch (DNS not allowed); Claude Docs connector not used (not available in previous runs); no article figures used.
+New images: 23 C did-you-know-slac, 23 E quote-factory-gate.
+Metricool (Instagram + TikTok), JPGs from this repo:
+- 2026-11-23 07:30 — A inspection-check — link in bio → pre-shipment-inspection-china-to-kenya/
+- 2026-11-23 10:00 — C did-you-know-slac (did you know)
+- 2026-11-23 13:00 — B three-things (CTA) — link in bio → exw-vs-fob-china-to-kenya/
+- 2026-11-23 20:30 — E quote-factory-gate (quote card)
+21 and 22 Nov already full; 23 Nov 18:00 already filled ("Ask before it ships"). No combined IG+TikTok post uses .png.
+Buffer (X 8/10, Facebook 8/10, LinkedIn 9/10 before → 10/10 each):
+- X 2026-11-22 10:30 — 22 A origin-passport — certificate-of-origin-kenya-imports/
+- X 2026-11-22 12:00 — 22 D term-hs-code (term of the day)
+- Facebook 2026-11-22 20:00 — 22 B green-light — clearing-agent-at-mombasa-port/
+- Facebook 2026-11-23 13:00 — 23 A inspection-check — pre-shipment-inspection-china-to-kenya/
+- LinkedIn 2026-11-24 11:00 — article link: clearing-agent-at-jkia/ (no article facts used)
+Still unused for later Buffer slots: 18 A bill-of-lading, 18 C term-teu, 19 C lcl-wm, 22 B (X), 22 E (X), 23 A/B/C/E (X), 23 B/C (Facebook).

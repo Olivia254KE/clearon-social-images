@@ -158,3 +158,24 @@ Buffer (X 8/10, Facebook 8/10, LinkedIn 9/10 before → 10/10 each):
 - Facebook 2026-11-23 13:00 — 23 A inspection-check — pre-shipment-inspection-china-to-kenya/
 - LinkedIn 2026-11-24 11:00 — article link: clearing-agent-at-jkia/ (no article facts used)
 Still unused for later Buffer slots: 18 A bill-of-lading, 18 C term-teu, 19 C lcl-wm, 22 B (X), 22 E (X), 23 A/B/C/E (X), 23 B/C (Facebook).
+
+## 2026-11-24 (Tue) — theme: air freight and JKIA (process)
+- A poster `posters/2026-11-24_a_chargeable-weight.jpg` — educational: air cargo is charged on chargeable weight, the greater of actual weight and volumetric weight (from carton size); big-but-light vs small-but-heavy cartons; send carton dimensions with weights when asking for an air quote. Layout: light background, two white cards with drawn cartons of different sizes, navy rule bar with ruler icon. General air freight knowledge, no figures or divisors. Link: clearing-agent-at-jkia/ (no article facts used)
+- B poster `posters/2026-11-24_b_boarding-pass.jpg` — CTA: check in with us before it flies; cargo boarding pass CAN·HKG → NBO with four fields (supplier, cargo dims/weights, invoice+packing list drafts, goods description); stub "itemised quote". Deep navy, teal footer. Link: clearing-agent-at-jkia/
+- C, D, E: not made yet (next run).
+- Article-link post: clearing-agent-at-jkia/ (LinkedIn 11:00, already scheduled).
+
+## Scheduled this run (2026-11-21 14:43)
+Push check: OK. clearonlogistics.co.ke still blocked for web fetch (DNS not allowed); no article figures used.
+New images: 24 A chargeable-weight, 24 B boarding-pass.
+Metricool (Instagram + TikTok): nothing added; 21, 22 and 23 Nov all full. No combined IG+TikTok post uses .png.
+Buffer (X 6/10, Facebook 8/10, LinkedIn 8/10 before → 10/10 each):
+- X 2026-11-22 17:00 — 22 B green-light — clearing-agent-at-mombasa-port/
+- X 2026-11-22 20:00 — 22 E tip-description (quick tip)
+- X 2026-11-23 08:00 — article link: air-freight-china-to-kenya-guangzhou-hong-kong/ (no article facts used)
+- X 2026-11-23 10:30 — 23 A inspection-check — pre-shipment-inspection-china-to-kenya/
+- Facebook 2026-11-23 17:00 — 23 C did-you-know-slac (did you know)
+- Facebook 2026-11-23 20:00 — 23 B three-things — exw-vs-fob-china-to-kenya/
+- LinkedIn 2026-11-24 13:00 — 24 A chargeable-weight
+- LinkedIn 2026-11-24 17:00 — 24 B boarding-pass — clearing-agent-at-jkia/
+Still unused for later Buffer slots: 23 C/B/E (X 17:00, 20:00), 24 A/B (X, Facebook). Next run: make 24 C/D/E and fill Metricool 24 Nov.

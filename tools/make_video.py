@@ -16,8 +16,10 @@ Structure (about 1.6 s intro + 6 s per slide, adjustable with --slide-seconds, +
   - Transitions: eased brand wipe (teal panel, then navy panel, angled edges)
     with a whoosh in the soundtrack.
   - End card: "Chat with us on WhatsApp", number, email, website.
-  - Soundtrack: original corporate track generated here (piano arpeggio,
-    pad, bass, kick, clap, hats, whooshes, riser). The seed varies key,
+  - Transitions: brand wipe, vertical wipe, split panels or push-through zoom
+    (--transition; the end card always enters with the brand wipe).
+  - Soundtrack: original corporate track generated here, in one of three moods
+    (--mood piano, pluck or ambient), with bass, beat, whooshes and a riser. The seed varies key,
     tempo and progression so videos do not all sound the same.
 
 Needs: Pillow, numpy, playwright (chromium or /usr/bin/google-chrome), ffmpeg,
@@ -139,6 +141,64 @@ def wipe(a, b, p):
     return base
 
 
+def wipe_up(a, b, p):
+    """Vertical brand wipe: blue edge, teal band and navy panel rise from the bottom."""
+    base = (a if p < 0.5 else b).copy()
+    d = ImageDraw.Draw(base)
+    slant, band, blue = 160, 70, 26
+    total_h = H + slant + 40 + band + blue
+    span = H + slant + total_h
+    lead = H - ease(p) * span                # front edge y on the left side, moving up
+    def para(y1, y2, color):                 # y1 < y2, top edge y1
+        d.polygon([(0, y1), (W, y1 - slant), (W, y2 - slant), (0, y2)], fill=color)
+    para(lead, lead + blue, BLUE)
+    para(lead + blue, lead + blue + band, TEAL)
+    para(lead + blue + band, lead + total_h, DEEP)
+    return base
+
+
+def split(a, b, p):
+    """Two navy panels with teal inner edges close from the sides, then open on the next slide."""
+    q = ease(p * 2) if p < 0.5 else ease((1 - p) * 2)
+    base = (a if p < 0.5 else b).copy()
+    d = ImageDraw.Draw(base)
+    half = int((W / 2 + 6) * q)
+    edge = 10
+    if half > 0:
+        d.rectangle((0, 0, half, H), fill=DEEP)
+        d.rectangle((max(0, half - edge), 0, half, H), fill=TEAL)
+        d.rectangle((W - half, 0, W, H), fill=DEEP)
+        d.rectangle((W - half, 0, min(W, W - half + edge), H), fill=TEAL)
+    return base
+
+
+def zoom_fade(a, b, p):
+    """Push through navy: the outgoing slide scales up into deep navy, a teal line flashes,
+    then the incoming slide settles in from slightly larger. Never shows two slides at once."""
+    navy = Image.new('RGB', (W, H), DEEP)
+    if p < 0.5:
+        q = ease(p * 2)
+        s = 1 + 0.10 * q
+        w, h = int(W * s), int(H * s)
+        big = a.resize((w, h), Image.BILINEAR).crop(((w - W) // 2, (h - H) // 2, (w - W) // 2 + W, (h - H) // 2 + H))
+        f = Image.blend(big, navy, q)
+    else:
+        q = ease((p - 0.5) * 2)
+        s = 1.06 - 0.06 * q
+        w, h = int(W * s), int(H * s)
+        big = b.resize((w, h), Image.BILINEAR).crop(((w - W) // 2, (h - H) // 2, (w - W) // 2 + W, (h - H) // 2 + H))
+        f = Image.blend(navy, big, q)
+    if 0.35 < p < 0.65:
+        d = ImageDraw.Draw(f)
+        k = 1 - abs(p - 0.5) / 0.15
+        L = int(W * 0.7 * k)
+        d.rectangle((W // 2 - L // 2, H // 2 - 3, W // 2 + L // 2, H // 2 + 3), fill=TEAL)
+    return f
+
+
+TRANSITIONS = {'wipe': wipe, 'wipe_up': wipe_up, 'split': split, 'zoom': zoom_fade}
+
+
 def intro_frame(bg, logo, t):
     f = bg.copy()
     p = ease(t / 0.8)
@@ -164,7 +224,7 @@ def end_frame(card, t):
 
 
 # ---------- audio ----------
-def soundtrack(total, trans_times, seed):
+def soundtrack(total, trans_times, seed, mood='piano'):
     rnd = random.Random(seed)
     sr = 44100
     n = int(total * sr) + sr
@@ -194,6 +254,12 @@ def soundtrack(total, trans_times, seed):
         sig = sum(np.sin(2 * np.pi * f * t) + 0.5 * np.sin(2 * np.pi * f * 1.003 * t) for f in fs)
         return vol * env * sig / len(fs)
 
+    def pluck(f, dur, vol):
+        t = np.arange(int(dur * sr)) / sr
+        env = np.exp(-t * 9) * np.minimum(1, t / 0.003)
+        saw = 2 * ((f * t) % 1) - 1
+        return vol * env * (0.6 * saw + 0.4 * np.sin(2 * np.pi * f * t))
+
     bar = 4 * beat
     nbars = int(total / bar) + 1
     for i in range(nbars):
@@ -204,13 +270,23 @@ def soundtrack(total, trans_times, seed):
         t0 = i * bar
         add(pad([hz(m) for m in chord], bar + 0.2, 0.05), t0)
         add(piano(hz(r - 24), bar, 0.16), t0)                      # bass
-        arp = [chord[0], chord[1], chord[2], chord[1] + 12, chord[2], chord[1], chord[0] + 12, chord[2]]
-        for k, m in enumerate(arp):                                 # 8th-note arpeggio
-            add(piano(hz(m + 12), 0.9, 0.07), t0 + k * beat / 2)
+        if mood == 'pluck':                                         # bright 16th-note plucks
+            arp = [chord[0], chord[2], chord[1] + 12, chord[2], chord[0] + 12, chord[2], chord[1] + 12, chord[2]] * 2
+            for k, m in enumerate(arp):
+                add(pluck(hz(m + 12), 0.35, 0.05), t0 + k * beat / 4)
+        elif mood == 'ambient':                                     # slow, wide pad with a soft pulse
+            add(pad([hz(m + 12) for m in chord], bar + 0.4, 0.05), t0)
+            for k in range(4):
+                add(piano(hz(chord[k % 3] + 12), 1.6, 0.04), t0 + k * beat)
+        else:                                                       # piano 8th-note arpeggio
+            arp = [chord[0], chord[1], chord[2], chord[1] + 12, chord[2], chord[1], chord[0] + 12, chord[2]]
+            for k, m in enumerate(arp):
+                add(piano(hz(m + 12), 0.9, 0.07), t0 + k * beat / 2)
     nbeats = int(total / beat) + 1
     for k in range(nbeats):
         t0 = k * beat
         if t0 < 0.6: continue                                       # let the intro breathe
+        if mood == 'ambient' and k % 2: continue                    # lighter rhythm for ambient
         tt = np.arange(int(0.3 * sr)) / sr
         if k % 2 == 0:                                              # kick on 1 and 3
             add(0.45 * np.sin(2 * np.pi * (48 + 90 * np.exp(-tt * 28)) * tt) * np.exp(-tt * 9), t0)
@@ -244,6 +320,10 @@ def main():
     ap.add_argument('--seed', type=int, default=1)
     ap.add_argument('--headline', default='IMPORT SMARTER')
     ap.add_argument('--node-modules', default=None)
+    ap.add_argument('--transition', default='auto', choices=['auto', 'mix'] + ['wipe', 'wipe_up', 'split', 'zoom'],
+                    help='auto: one style picked from the seed; mix: vary style at each cut')
+    ap.add_argument('--mood', default='auto', choices=['auto', 'piano', 'pluck', 'ambient'],
+                    help='soundtrack style; auto picks from the seed')
     ap.add_argument('--slide-seconds', type=float, default=None,
                     help='seconds each slide stays on screen (default 6.0; use 7-8 for text-heavy posters)')
     a = ap.parse_args()
@@ -266,7 +346,18 @@ def main():
 
     tmp = tempfile.mkdtemp()
     wav = os.path.join(tmp, 'a.wav')
-    audio, sr = soundtrack(total, trans_times, a.seed)
+    rnd = random.Random(a.seed)
+    mood = a.mood if a.mood != 'auto' else rnd.choice(['piano', 'piano', 'pluck', 'ambient'])
+    names = list(TRANSITIONS)
+    if a.transition == 'mix':
+        styles = [rnd.choice(names) for _ in trans_times]
+    else:
+        one = a.transition if a.transition != 'auto' else rnd.choice(names)
+        styles = [one] * len(trans_times)
+    # keep the brand wipe into the end card for a consistent sign-off
+    styles[-1] = 'wipe'
+    print(f'STYLE transitions={",".join(styles)} mood={mood}')
+    audio, sr = soundtrack(total, trans_times, a.seed, mood)
     st = (np.stack([audio, audio], 1) * 32767).astype(np.int16)
     with wave.open(wav, 'wb') as w:
         w.setnchannels(2); w.setsampwidth(2); w.setframerate(sr); w.writeframes(st.tobytes())
@@ -295,7 +386,7 @@ def main():
                 p = (t - (bt - half)) / TRANS
                 prev_f = seg_frame(k - 1, min(t - bounds[k - 1], segs[k - 1][1] - 1e-3))
                 next_f = seg_frame(k, max(0.0, t - bt))
-                frame = wipe(prev_f, next_f, p)
+                frame = TRANSITIONS[styles[k - 1]](prev_f, next_f, p)
         ff.stdin.write(frame.tobytes())
     ff.stdin.close(); ff.wait()
     # cover / thumbnail: the middle of the first slide (the poster itself, fully visible)

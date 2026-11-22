@@ -7,7 +7,7 @@ Usage:
 Slides may be 1080x1350 posters/slides or 1080x1920 Story versions; 4:5 images
 are placed on a blurred, darkened 9:16 background automatically.
 
-Structure (about 1.3 s intro + 2.6 s per slide + 2.8 s end card):
+Structure (about 1.6 s intro + 6 s per slide, adjustable with --slide-seconds, + 3.5 s end card):
   - Intro: deep navy, logo scales in, teal rule draws across, short tagline.
   - Slides: slow push-in on each slide.
   - Transitions: eased brand wipe (teal panel, then navy panel, angled edges)
@@ -29,7 +29,7 @@ W, H, FPS = 1080, 1920, 30
 NAVY, DEEP, TEAL, BLUE = (0, 34, 68), (0, 26, 53), (0, 185, 171), (48, 121, 255)
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-INTRO, SLIDE, TRANS, END = 1.3, 2.6, 0.55, 2.8
+INTRO, SLIDE, TRANS, END = 1.6, 6.0, 0.8, 3.5
 
 
 # ---------- helpers ----------
@@ -111,8 +111,8 @@ def render_cards(nm, headline):
 
 
 # ---------- visuals ----------
-def push_in(img, p, amount=0.06):
-    s = 1 + amount * ease(p) if False else 1 + amount * p
+def push_in(img, p, amount=0.04):
+    s = 1 + amount * p
     w, h = int(W * s), int(H * s)
     big = img.resize((w, h), Image.BILINEAR)
     l, t = (w - W) // 2, (h - H) // 2
@@ -241,7 +241,11 @@ def main():
     ap.add_argument('--seed', type=int, default=1)
     ap.add_argument('--headline', default='IMPORT SMARTER')
     ap.add_argument('--node-modules', default=None)
+    ap.add_argument('--slide-seconds', type=float, default=None,
+                    help='seconds each slide stays on screen (default 6.0; use 7-8 for text-heavy posters)')
     a = ap.parse_args()
+    global SLIDE
+    if a.slide_seconds: SLIDE = a.slide_seconds
 
     nm = find_node_modules(a.node_modules)
     cards = render_cards(nm, a.headline.upper())

@@ -7,6 +7,9 @@ Usage:
 Slides may be 1080x1350 posters/slides or 1080x1920 Story versions; 4:5 images
 are placed on a blurred, darkened 9:16 background automatically.
 
+Prints THUMBNAIL_OFFSET_MS (pass it to Buffer as the video's thumbnailOffset)
+and writes <out>_cover.jpg, a cover frame taken from the middle of the first slide.
+
 Structure (about 1.6 s intro + 6 s per slide, adjustable with --slide-seconds, + 3.5 s end card):
   - Intro: deep navy, logo scales in, teal rule draws across, short tagline.
   - Slides: slow push-in on each slide.
@@ -142,14 +145,14 @@ def intro_frame(bg, logo, t):
     s = 0.82 + 0.18 * p
     lw = int(360 * s); lh = int(logo.height * lw / logo.width)
     lg = logo.resize((lw, lh), Image.LANCZOS)
-    alpha = lg.split()[3].point(lambda v: int(v * min(1, t / 0.5)))
+    # no fade from black: the very first frame already shows the logo and headline,
+    # so the video never looks blank before it plays
+    alpha = lg.split()[3].point(lambda v: int(v * (0.7 + 0.3 * min(1, t / 0.5))))
     f.paste(lg, ((W - lw) // 2, 760 - lh // 2), alpha)
     d = ImageDraw.Draw(f)
-    q = ease((t - 0.25) / 0.7)
+    q = 0.35 + 0.65 * ease(t / 0.8)
     half = int(300 * q)
     d.rectangle((W // 2 - half, 1110, W // 2 + half, 1116), fill=TEAL)
-    if t < 0.35:  # fade from black
-        f = Image.blend(Image.new('RGB', (W, H), DEEP), f, t / 0.35)
     return f
 
 
@@ -295,7 +298,14 @@ def main():
                 frame = wipe(prev_f, next_f, p)
         ff.stdin.write(frame.tobytes())
     ff.stdin.close(); ff.wait()
+    # cover / thumbnail: the middle of the first slide (the poster itself, fully visible)
+    thumb_ms = int((INTRO + SLIDE / 2) * 1000)
+    cover = os.path.splitext(a.out)[0] + '_cover.jpg'
+    subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-ss', f'{thumb_ms / 1000:.2f}', '-i', a.out,
+                    '-frames:v', '1', '-q:v', '2', cover], check=True)
     print(a.out, f'{total:.1f}s')
+    print(f'THUMBNAIL_OFFSET_MS={thumb_ms}')
+    print(f'COVER_JPG={cover}')
 
 
 if __name__ == '__main__':

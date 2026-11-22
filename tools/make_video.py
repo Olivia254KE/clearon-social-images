@@ -350,7 +350,8 @@ def main():
     mood = a.mood if a.mood != 'auto' else rnd.choice(['piano', 'piano', 'pluck', 'ambient'])
     names = list(TRANSITIONS)
     if a.transition == 'mix':
-        styles = [rnd.choice(names) for _ in trans_times]
+        order = names[:]; rnd.shuffle(order)            # rotate evenly, never the same style twice in a row
+        styles = [order[i % len(order)] for i in range(len(trans_times))]
     else:
         one = a.transition if a.transition != 'auto' else rnd.choice(names)
         styles = [one] * len(trans_times)

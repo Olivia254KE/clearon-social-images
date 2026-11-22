@@ -224,3 +224,9 @@ Buffer (X 7/10, Facebook 8/10, LinkedIn 8/10 before → 10/10 each):
 - LinkedIn 2026-11-25 13:00 — 25 A who-handles-what
 - LinkedIn 2026-11-25 17:00 — 25 B price-tag — exw-vs-fob-india-to-kenya/
 Still unused for later Buffer slots: 24 B/D (X 17:00, 20:00), 25 article/A/C/B (X, Facebook). Next: make 25 C/D/E and fill Metricool 25 Nov.
+
+## 2026-11-23 — moved to Buffer 2 (scheduled manually on 22 Nov evening)
+Metricool stopped publishing (free plan limit). Monday's set re-scheduled in Buffer 2:
+- Instagram feed 07:30 A inspection-check, 10:00 C did-you-know-slac, 13:00 B three-things, 18:00 D 2026-11-17_week_7_mon_advice.jpg, 20:30 E quote-factory-gate
+- Instagram Stories 08:00 A story (link sticker pre-shipment-inspection-china-to-kenya), 18:30 B story (link sticker exw-vs-fob-china-to-kenya)
+- TikTok and Threads: same five feed posts at the same times

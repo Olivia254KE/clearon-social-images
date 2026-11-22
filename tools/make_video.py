@@ -19,7 +19,7 @@ Structure (about 1.6 s intro + 6 s per slide, adjustable with --slide-seconds, +
   - Transitions: brand wipe, vertical wipe, split panels or push-through zoom
     (--transition; the end card always enters with the brand wipe).
   - Soundtrack: original corporate track generated here, in one of three moods
-    (--mood piano, pluck or ambient), with bass, beat, whooshes and a riser. The seed varies key,
+    (--mood piano, pluck, ambient or maritime: sea swell, distant ship horn, container clanks), with bass, beat, whooshes and a riser. The seed varies key,
     tempo and progression so videos do not all sound the same.
 
 Needs: Pillow, numpy, playwright (chromium or /usr/bin/google-chrome), ffmpeg,
@@ -274,6 +274,10 @@ def soundtrack(total, trans_times, seed, mood='piano'):
             arp = [chord[0], chord[2], chord[1] + 12, chord[2], chord[0] + 12, chord[2], chord[1] + 12, chord[2]] * 2
             for k, m in enumerate(arp):
                 add(pluck(hz(m + 12), 0.35, 0.05), t0 + k * beat / 4)
+        elif mood == 'maritime':                                    # open, steady, ocean-going feel
+            add(pad([hz(m + 12) for m in chord], bar + 0.4, 0.045), t0)
+            for k, m in enumerate([chord[0], chord[2], chord[1] + 12, chord[2]]):
+                add(piano(hz(m + 12), 1.4, 0.055), t0 + k * beat)
         elif mood == 'ambient':                                     # slow, wide pad with a soft pulse
             add(pad([hz(m + 12) for m in chord], bar + 0.4, 0.05), t0)
             for k in range(4):
@@ -286,7 +290,7 @@ def soundtrack(total, trans_times, seed, mood='piano'):
     for k in range(nbeats):
         t0 = k * beat
         if t0 < 0.6: continue                                       # let the intro breathe
-        if mood == 'ambient' and k % 2: continue                    # lighter rhythm for ambient
+        if mood in ('ambient', 'maritime') and k % 2: continue      # lighter rhythm
         tt = np.arange(int(0.3 * sr)) / sr
         if k % 2 == 0:                                              # kick on 1 and 3
             add(0.45 * np.sin(2 * np.pi * (48 + 90 * np.exp(-tt * 28)) * tt) * np.exp(-tt * 9), t0)
@@ -296,6 +300,23 @@ def soundtrack(total, trans_times, seed, mood='piano'):
             add(0.10 * np.convolve(nz, [1, -1], 'same') * env, t0)
         hh = np.random.RandomState(k + 999).randn(int(0.04 * sr))  # off-beat hat
         add(0.025 * np.diff(hh, prepend=0) * np.exp(-np.arange(len(hh)) / sr * 90), t0 + beat / 2)
+    if mood == 'maritime':                                          # shipping sound design
+        L = int(total * sr)                                         # sea bed: slow swelling waves
+        nz = np.random.RandomState(seed % 9973).randn(L)
+        sea = np.convolve(nz, np.ones(60) / 60, 'same')
+        tt = np.arange(L) / sr
+        swell = 0.55 + 0.45 * np.sin(2 * np.pi * tt / 5.5) ** 2
+        add(0.20 * sea * swell, 0.0)
+        H_ = int(2.2 * sr); th = np.arange(H_) / sr                 # distant ship horn on the intro
+        henv = np.minimum(1, th / 0.25) * np.minimum(1, (2.2 - th) / 0.6)
+        horn = sum(np.sin(2 * np.pi * f * th * (1 + 0.003 * np.sin(2 * np.pi * 5 * th))) * w
+                   for f, w in ((73.4, 1.0), (110.0, 0.7), (146.8, 0.35), (220.0, 0.15)))
+        add(0.16 * henv * horn, 0.15)
+        for tt0 in trans_times[1:-1]:                                # container clank on cuts
+            C = int(0.5 * sr); tc = np.arange(C) / sr
+            clank = sum(np.sin(2 * np.pi * f * tc) * np.exp(-tc * d) for f, d in
+                        ((523, 9), (811, 12), (1247, 16), (1873, 22), (2610, 30)))
+            add(0.05 * clank, tt0 - 0.02)
     for tt0 in trans_times:                                         # whoosh on each wipe
         L = int(0.7 * sr); x = np.arange(L) / L
         nz = np.random.RandomState(int(tt0 * 100)).randn(L)
@@ -322,7 +343,7 @@ def main():
     ap.add_argument('--node-modules', default=None)
     ap.add_argument('--transition', default='auto', choices=['auto', 'mix'] + ['wipe', 'wipe_up', 'split', 'zoom'],
                     help='auto: one style picked from the seed; mix: vary style at each cut')
-    ap.add_argument('--mood', default='auto', choices=['auto', 'piano', 'pluck', 'ambient'],
+    ap.add_argument('--mood', default='auto', choices=['auto', 'piano', 'pluck', 'ambient', 'maritime'],
                     help='soundtrack style; auto picks from the seed')
     ap.add_argument('--slide-seconds', type=float, default=None,
                     help='seconds each slide stays on screen (default 6.0; use 7-8 for text-heavy posters)')
@@ -347,7 +368,7 @@ def main():
     tmp = tempfile.mkdtemp()
     wav = os.path.join(tmp, 'a.wav')
     rnd = random.Random(a.seed)
-    mood = a.mood if a.mood != 'auto' else rnd.choice(['piano', 'piano', 'pluck', 'ambient'])
+    mood = a.mood if a.mood != 'auto' else rnd.choice(['piano', 'pluck', 'ambient', 'maritime', 'maritime'])
     names = list(TRANSITIONS)
     if a.transition == 'mix':
         order = names[:]; rnd.shuffle(order)            # rotate evenly, never the same style twice in a row

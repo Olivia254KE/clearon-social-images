@@ -205,3 +205,22 @@ Buffer (X 8/10, Facebook 8/10, LinkedIn 9/10 before → 10/10 each):
 - Facebook 2026-11-24 13:00 — 24 A chargeable-weight — question: big and light or small and heavy? — clearing-agent-at-jkia/
 - LinkedIn 2026-11-25 11:00 — article link: exw-vs-fob-india-to-kenya/
 Still unused for later Buffer slots: 24 A/C/B/D (X), 24 C/B (Facebook). Next: make 25 A–E (India lane) and fill Metricool 25 Nov.
+
+## 2026-11-25 (Wed) — posters A and B added (run 2026-11-22 14:43)
+- A poster `posters/2026-11-25_a_who-handles-what.jpg` — educational: EXW vs FOB from India, who handles what. Layout: deep navy, white comparison table (rows: loading at factory, transport to port, export clearance in India, loading on board, sea freight to Mombasa, clearance in Kenya; columns EXW/FOB with You/Supplier pills). General Incoterms definitions only, no article facts. Link: exw-vs-fob-india-to-kenya/
+- B poster `posters/2026-11-25_b_price-tag.jpg` — CTA: got a price from an Indian supplier? Show us the terms / send the supplier's quote for an itemised quote. Layout: teal dotted background, tilted white price tag (Incoterm, named place, cargo FCL/LCL/air, itemised quote) + three check bullets, navy CTA bar. No facts. Link: exw-vs-fob-india-to-kenya/
+- C, D, E: not made yet (next run).
+
+## Scheduled this run (2026-11-22 14:43)
+Push check: OK. clearonlogistics.co.ke still blocked for web fetch (DNS not allowed); no article figures used.
+New images: 25 A who-handles-what, 25 B price-tag; JPG copy `posters/2026-11-17_week_5_sat_origins.jpg` of the repo's India-or-China poster.
+Metricool (Instagram + TikTok): 22, 23 and 24 Nov already full; nothing added. PNG fix: post 26 Nov 10:00 "India or China" (IG+TikTok, created 16 Nov) used a Metricool-hosted .png; Metricool's PNG could not be downloaded from the shell, so media swapped to the JPG of the matching repo poster (2026-11-17_week_5_sat_origins), all other fields unchanged.
+Buffer (X 7/10, Facebook 8/10, LinkedIn 8/10 before → 10/10 each):
+- X 2026-11-24 08:00 — article link: clearing-agent-at-jkia/ (no article facts used)
+- X 2026-11-24 10:30 — 24 A chargeable-weight
+- X 2026-11-24 12:00 — 24 C myth-air-waybill (myth vs fact)
+- Facebook 2026-11-24 17:00 — 24 C myth-air-waybill
+- Facebook 2026-11-24 20:00 — 24 B boarding-pass — clearing-agent-at-jkia/
+- LinkedIn 2026-11-25 13:00 — 25 A who-handles-what
+- LinkedIn 2026-11-25 17:00 — 25 B price-tag — exw-vs-fob-india-to-kenya/
+Still unused for later Buffer slots: 24 B/D (X 17:00, 20:00), 25 article/A/C/B (X, Facebook). Next: make 25 C/D/E and fill Metricool 25 Nov.

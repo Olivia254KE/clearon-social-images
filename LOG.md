@@ -179,3 +179,29 @@ Buffer (X 6/10, Facebook 8/10, LinkedIn 8/10 before → 10/10 each):
 - LinkedIn 2026-11-24 13:00 — 24 A chargeable-weight
 - LinkedIn 2026-11-24 17:00 — 24 B boarding-pass — clearing-agent-at-jkia/
 Still unused for later Buffer slots: 23 C/B/E (X 17:00, 20:00), 24 A/B (X, Facebook). Next run: make 24 C/D/E and fill Metricool 24 Nov.
+
+## 2026-11-24 (Tue) — cards added (run 2026-11-22 06:43)
+- C card `posters/2026-11-24_c_myth-air-waybill.jpg` — myth vs fact: myth "the air waybill works just like a bill of lading"; fact: an air waybill is not a document of title; it is the receipt and contract of carriage, and cargo is released to the consignee named on it. Navy top / white bottom split, tilted AWB document with blue X. General trade knowledge. Question: did you know the difference?
+- D card `posters/2026-11-24_d_term-consignee.jpg` — term of the day: consignee, the person or company the goods are shipped to, named on the B/L or AWB. Blue background, shipper → carrier → consignee node flow. Question: who is named as consignee on your shipments?
+- E card `posters/2026-11-24_e_question-urgent.jpg` — question of the day: what's the most urgent thing you've ever had to fly in? White background, dotted flight arc origin → JKIA with plane. No facts.
+
+## 2026-11-25 (Wed) — theme: India lane (Incoterms)
+- Article-link post: exw-vs-fob-india-to-kenya/ (LinkedIn 11:00). General EXW/FOB definitions only, no article facts. A–E images not made yet.
+
+## Scheduled this run (2026-11-22 06:43)
+Push check: OK. clearonlogistics.co.ke still blocked for web fetch (DNS not allowed); no article figures used.
+New images: 24 C myth-air-waybill, 24 D term-consignee, 24 E question-urgent.
+Metricool (Instagram + TikTok), JPGs from this repo — 22 and 23 Nov already full:
+- 2026-11-24 07:30 — A chargeable-weight — link in bio → clearing-agent-at-jkia/
+- 2026-11-24 10:00 — C myth-air-waybill (myth vs fact)
+- 2026-11-24 13:00 — B boarding-pass (CTA) — link in bio → clearing-agent-at-jkia/
+- 2026-11-24 18:00 — D term-consignee (term of the day)
+- 2026-11-24 20:30 — E question-urgent (question of the day)
+No combined IG+TikTok post uses .png (only drafts "poster on hold", left untouched).
+Buffer (X 8/10, Facebook 8/10, LinkedIn 9/10 before → 10/10 each):
+- X 2026-11-23 17:00 — 23 B three-things — exw-vs-fob-china-to-kenya/
+- X 2026-11-23 20:00 — 23 C did-you-know-slac (did you know)
+- Facebook 2026-11-24 10:00 — article link: clearing-agent-at-jkia/
+- Facebook 2026-11-24 13:00 — 24 A chargeable-weight — question: big and light or small and heavy? — clearing-agent-at-jkia/
+- LinkedIn 2026-11-25 11:00 — article link: exw-vs-fob-india-to-kenya/
+Still unused for later Buffer slots: 24 A/C/B/D (X), 24 C/B (Facebook). Next: make 25 A–E (India lane) and fill Metricool 25 Nov.

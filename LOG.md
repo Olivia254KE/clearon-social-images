@@ -245,3 +245,28 @@ Buffer (X 8/10, Facebook 8/10, LinkedIn 9/10 before → 10/10 each):
 - LinkedIn 26 Nov 11:00 — article link shipping-batteries-liquids-restricted-goods-china-to-kenya (UTM _link; general wording only, no article facts)
 Failures: Buffer 2 rejected Instagram firstComment ("First comment requires a paid plan") → posted without first comment, WhatsApp/contact line in caption. Threads rejected a caption over 500 characters → shortened and rescheduled. Assume firstComment unavailable on both free plans: put tracked links in the main text instead.
 Still to do: 24 Nov IG 13:00 D, 18:00 B reel, 18:30 Story B (link wa.me), 20:30 E; 25 C/D/E cards not made yet (25 is India lane / EXW vs FOB); 25 X posts; 25 Facebook 17:00/20:00; 26 Nov set (batteries & restricted goods from China + solar).
+
+## 2026-11-25 (Wed) — cards added (run 2026-11-23 14:51)
+- C card `posters/2026-11-25_c_tip-named-place.jpg` — quick tip: "FOB" on its own is only half a term; every Incoterm needs a named place ("FOB Mundra, India") that says where the supplier's job ends. Blueprint-grid navy, crossed-out vs ticked quote cards. General Incoterms knowledge. Question: does your supplier's quote name the port?
+- D card `posters/2026-11-25_d_poll-india-terms.jpg` — A/B/C poll: which terms does your Indian supplier quote? A EXW, B FOB, C not sure. Navy header with dotted route, white ballot cards on pale background. No facts beyond EXW/FOB one-line definitions.
+- E: not made yet.
+- A video `posters/videos/2026-11-25_a_who-handles-what.mp4` (+ _cover.jpg) — slides: 25 A + 25 C; seed 20261126; STYLE transitions=wipe_up,wipe_up,wipe mood=maritime; 19.1 s; THUMBNAIL_OFFSET_MS=5100. Frames checked (intro, slide, transition, end card, cover): clean.
+
+## 2026-11-26 (Thu) — theme: batteries, liquids, restricted goods from China + solar (Claude Docs plan, Week 2)
+- A CAROUSEL, 7 slides `posters/2026-11-26_a_batteries-solar_01.jpg` … `_07.jpg`, PDF `posters/docs/2026-11-26_a_batteries-solar.pdf` — "Shipping batteries or solar gear? Tell us 5 things before you book": what exactly is it (battery type), how is it packed (alone / with / inside equipment), how much, what the supplier can send (SDS and battery test report), sea or air (carriers apply stricter rules to batteries by air). Hook + 5 steps + "Your turn" WhatsApp CTA; navy gradient, wave + faint container shapes, teal progress line, gradient icon tiles with big ghost step numbers (new layout). General shipping knowledge only; article not readable this run. Link: shipping-batteries-liquids-restricted-goods-china-to-kenya/
+- B poster `posters/2026-11-26_b_can-it-ship.jpg` — CTA: "Can it ship?" big teal diamond label with "?", chips (batteries, solar inverters, liquids, aerosols, chemicals, power banks), "Send us the product first". Pale top / navy bottom split (new layout). No facts.
+- C, D, E, stories and videos: not made yet.
+
+## Scheduled this run (2026-11-23 14:51)
+Push check: OK (clone was again on a detached HEAD; checked out main tracking origin/main, dry-run "Everything up-to-date"). Metricool not used. clearonlogistics.co.ke fetch failed (permission not granted in time); no article facts used.
+Failures: Buffer 2 Instagram post 6b031d1dc72676f5e944559d (23 Nov 10:00, C did-you-know-slac) status error "stuck processing" → retried once as a new post on Instagram 24 Nov 13:00 (same image, caption + WhatsApp line). Failed post left in place.
+Buffer 2 (IG 6/10, TikTok 7/10, Threads 7/10 before → 10/10 each):
+- Instagram 24 Nov 13:00 — retry 23 C did-you-know-slac; 18:00 — B boarding-pass REEL (split/wipe, ambient, offset 4600); 18:30 — Story B (link sticker wa.me); 20:30 — E question-urgent. (24 D term-consignee not posted on IG: its slot went to the retry.)
+- TikTok 25 Nov 07:30 — A who-handles-what VIDEO (wipe_up, maritime, offset 5100); 10:00 — C tip-named-place; 13:00 — D poll-india-terms
+- Threads 25 Nov 07:30 — A (UTM threads _a); 10:00 — C; 13:00 — D
+Buffer (X 7/10, Facebook 8/10, LinkedIn 8/10 before → 10/10 each):
+- X 25 Nov 08:00 — article link exw-vs-fob-india-to-kenya (UTM _link); 10:30 — A who-handles-what (UTM _a); 12:00 — C tip-named-place
+- Facebook 25 Nov 17:00 — C tip-named-place; 20:00 — B price-tag (UTM _b)
+- LinkedIn 26 Nov 13:00 — A batteries-solar CAROUSEL as PDF document (UTM _a); 17:00 — B can-it-ship (UTM _b)
+Note: Instagram auto-tags "@clearonlogistics.co.ke" inside the email address as a mention; harmless, left as is.
+Still to do: 25 Nov IG (all slots), 25 B video, 25 E card, TikTok/Threads 25 18:00/20:30; X 25 17:00/20:00; 26 Nov C/D/E, 26 stories (A = carousel slide 1) and videos; Facebook/X 26.

@@ -230,3 +230,18 @@ Metricool stopped publishing (free plan limit). Monday's set re-scheduled in Buf
 - Instagram feed 07:30 A inspection-check, 10:00 C did-you-know-slac, 13:00 B three-things, 18:00 D 2026-11-17_week_7_mon_advice.jpg, 20:30 E quote-factory-gate
 - Instagram Stories 08:00 A story (link sticker pre-shipment-inspection-china-to-kenya), 18:30 B story (link sticker exw-vs-fob-china-to-kenya)
 - TikTok and Threads: same five feed posts at the same times
+
+## Scheduled this run (2026-11-23 06:51)
+Push check: OK (local clone was on a detached HEAD; reset to origin/main, dry-run "Everything up-to-date"). Metricool not used. Claude Docs plan read: Week 2 rotation (Thu 26 Nov = batteries & restricted goods from China + solar). clearonlogistics.co.ke articles not fetched; no article figures used. Failed posts (both Buffer accounts, last 48h): none.
+New files: `posters/videos/2026-11-24_a_chargeable-weight.mp4` (+ _cover.jpg; seed 20261124, STYLE transitions=zoom,wipe mood=pluck, 11.1 s, thumbnailOffset 4600) and `posters/videos/2026-11-24_b_boarding-pass.mp4` (+ _cover.jpg; seed 20261125, STYLE transitions=split,wipe mood=ambient, 11.1 s, thumbnailOffset 4600). Frames checked (intro, slide, transition, end card): clean.
+Slot order note: on IG/TikTok/Threads the day runs A 07:30, C 10:00, D 13:00, B 18:00, E 20:30, so B's video lands in the 18:00 video slot and next to Story B at 18:30.
+Buffer 2 (IG 7/10, TikTok 5/10, Threads 5/10 before → 10/10 each):
+- Instagram 24 Nov 07:30 — A chargeable-weight REEL (video, zoom, pluck); 08:00 — Story A (link sticker clearing-agent-at-jkia, UTM); 10:00 — C myth-air-waybill
+- TikTok 24 Nov 07:30 A video; 10:00 C myth-air-waybill; 13:00 D term-consignee; 18:00 B boarding-pass video (split, ambient); 20:30 E question-urgent
+- Threads 24 Nov 07:30 A; 10:00 C; 13:00 D; 18:00 B; 20:30 E (still images; UTM links on A and B)
+Buffer (X 8/10, Facebook 8/10, LinkedIn 9/10 before → 10/10 each):
+- X 24 Nov 17:00 — B boarding-pass (UTM jkia); 20:00 — D term-consignee
+- Facebook 25 Nov 10:00 — article link exw-vs-fob-india-to-kenya (UTM _link); 13:00 — 25 A who-handles-what (link in text)
+- LinkedIn 26 Nov 11:00 — article link shipping-batteries-liquids-restricted-goods-china-to-kenya (UTM _link; general wording only, no article facts)
+Failures: Buffer 2 rejected Instagram firstComment ("First comment requires a paid plan") → posted without first comment, WhatsApp/contact line in caption. Threads rejected a caption over 500 characters → shortened and rescheduled. Assume firstComment unavailable on both free plans: put tracked links in the main text instead.
+Still to do: 24 Nov IG 13:00 D, 18:00 B reel, 18:30 Story B (link wa.me), 20:30 E; 25 C/D/E cards not made yet (25 is India lane / EXW vs FOB); 25 X posts; 25 Facebook 17:00/20:00; 26 Nov set (batteries & restricted goods from China + solar).

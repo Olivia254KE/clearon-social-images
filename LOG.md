@@ -288,3 +288,28 @@ Buffer (X 8/10, Facebook 8/10, LinkedIn 9/10 before → 10/10 each):
 - Facebook 26 Nov 10:00 — article link shipping-batteries-liquids-restricted-goods-china-to-kenya (UTM _link); 13:00 — 26 A batteries-solar CAROUSEL, 7 images (UTM _a)
 - LinkedIn 27 Nov 11:00 — article link chinese-new-year-2027-shipping-china-to-kenya (UTM _link) — seasonal post; date 6 Feb 2027 confirmed; general "factories commonly close" wording only.
 Still to do: 25 Nov IG 13:00 D / 18:00 B reel / 18:30 Story B (wa.me) / 20:30 E (IG full at 10); 26 Nov C/D/E cards, 26 stories (A = carousel slide 1) and B video, all Buffer 2 slots for 26; X 26; Facebook 26 17:00/20:00; LinkedIn 27 13:00/17:00 and 27 Nov set (CNY planning + quote checklist).
+
+## 2026-11-26 (Thu) — cards, stories and A video added (run 2026-11-24 14:51)
+- C card `posters/2026-11-26_c_spot-booking.jpg` — spot the mistake: tilted white booking note (Nansha → Mombasa, LCL, 120 cartons, goods "General electronics") beside a teal inset showing the real contents (solar inverters + lithium battery packs). Navy radial gradient with diagonal teal/blue bands (new layout). Answer: description too vague; lithium batteries are regulated as dangerous goods in transport and must be declared accurately (stable general fact; hint given on Facebook only).
+- D card `posters/2026-11-26_d_this-or-that-solar.jpg` — this or that: "Your next solar order: sea or air?" Pale chart-grid background, teal sun-ray burst, two arched teal/blue cards with ship and plane icons and a navy "OR" disc (new layout). No facts.
+- E: not made yet.
+- A video `posters/videos/2026-11-26_a_batteries-solar.mp4` (+ _cover.jpg) — slides 01,02,03,05,06,07 of the carousel; seed 20261126; STYLE transitions=split,wipe,wipe_up,zoom,split,wipe,wipe (mix) mood=pluck; 41.1 s; THUMBNAIL_OFFSET_MS=4600. Frames checked (intro, slide, mid-transition, end card, cover): clean.
+- Stories: `posters/stories/2026-11-26_a_batteries-solar_story.jpg` (slide 1), `posters/stories/2026-11-26_b_can-it-ship_story.jpg`. Also `posters/stories/2026-11-25_b_price-tag_story.jpg`.
+
+## 2026-11-27 (Fri) — theme: Chinese New Year 2027 planning + quote checklist (Claude Docs plan, Week 2)
+- A poster `posters/2026-11-27_a_cny-work-back.jpg` — SEASONAL: "Work back from 6 Feb": tilted tear-off calendar page (February 2027, 6, Chinese New Year), dotted route arc, three numbered step cards (confirm production dates and factory close/reopen; documents ready early; book FCL/LCL/air before the rush). Deep navy gradient (new layout). CNY 2027 = 6 Feb 2027 confirmed by web search this run (Wayne State events calendar, calendardate.com). "Factories commonly close for an extended period" wording only; no closure lengths or rates. Link: chinese-new-year-2027-shipping-china-to-kenya/
+- B poster `posters/2026-11-27_b_quote-checklist.jpg` — CTA: "Before you say yes to a quote": white zig-zag-edged itemised slip listing sea/air freight, origin charges (if EXW), destination port and terminal charges, clearing and agency fee, duties and taxes (estimated), delivery; teal "Send us your quote on WhatsApp" bar. Dotted navy background (new layout). No figures. Link: reading-a-clearing-agent-quote/
+- C, D, E, stories and videos: not made yet.
+
+## Scheduled this run (2026-11-24 14:51)
+Push check: OK (clone was on a detached HEAD again; reset main to origin/main, dry-run "Everything up-to-date"). Metricool not used. Claude Docs plan not re-read (theme for 27 Nov taken from last run's log). clearonlogistics.co.ke articles not fetched; no article figures used. CNY 2027 date re-confirmed by web search.
+Failed posts (last 48h): Buffer none; Buffer 2 only IG 6b031d1dc72676f5e944559d, already retried on 24 Nov 13:00 — nothing new.
+Buffer 2 (IG 6/10, TikTok 7/10, Threads 7/10 before → 10/10 each):
+- Instagram 25 Nov 13:00 — D poll-india-terms; 18:00 — B price-tag REEL (zoom/wipe, piano, offset 4600); 18:30 — Story B (link sticker wa.me); 20:30 — E fill-blank-india
+- TikTok 26 Nov 07:30 — A batteries-solar VIDEO (mix, pluck, offset 4600); 10:00 — C spot-booking; 13:00 — D this-or-that-solar
+- Threads 26 Nov 07:30 — A batteries-solar CAROUSEL, 7 images (UTM threads _a); 10:00 — C; 13:00 — D
+Buffer (X 7/10, Facebook 8/10, LinkedIn 8/10 before → 10/10 each):
+- X 26 Nov 08:00 — article link shipping-batteries-liquids-restricted-goods-china-to-kenya (UTM x _link); 10:30 — A carousel slides 1,2,3,7 (UTM x _a); 12:00 — C spot-booking
+- Facebook 26 Nov 17:00 — C spot-booking; 20:00 — B can-it-ship (UTM facebook _b)
+- LinkedIn 27 Nov 13:00 — A cny-work-back (seasonal, UTM linkedin _a); 17:00 — B quote-checklist (UTM linkedin _b)
+Still to do: IG 26 Nov all slots (A carousel 07:30 as reel, Story A 08:00 link batteries article, C, D, B reel, Story B wa.me, E); 26 E card and B video (can-it-ship); TikTok/Threads 26 18:00/20:30; X 26 17:00/20:00; Facebook 27; 27 C/D/E, stories and videos; LinkedIn 28+.

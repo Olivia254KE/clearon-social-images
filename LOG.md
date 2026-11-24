@@ -270,3 +270,21 @@ Buffer (X 7/10, Facebook 8/10, LinkedIn 8/10 before → 10/10 each):
 - LinkedIn 26 Nov 13:00 — A batteries-solar CAROUSEL as PDF document (UTM _a); 17:00 — B can-it-ship (UTM _b)
 Note: Instagram auto-tags "@clearonlogistics.co.ke" inside the email address as a mention; harmless, left as is.
 Still to do: 25 Nov IG (all slots), 25 B video, 25 E card, TikTok/Threads 25 18:00/20:30; X 25 17:00/20:00; 26 Nov C/D/E, 26 stories (A = carousel slide 1) and videos; Facebook/X 26.
+
+## 2026-11-25 (Wed) — E card, Story A and B video added (run 2026-11-24 06:51)
+- E card `posters/2026-11-25_e_fill-blank-india.jpg` — fill in the blank: "The hardest part of importing from India is ___." White ruled-paper notebook layout with teal margin line and blank, blue pen icon (new layout). No facts.
+- Story `posters/stories/2026-11-25_a_who-handles-what_story.jpg` (blur-cover method).
+- B video `posters/videos/2026-11-25_b_price-tag.mp4` (+ _cover.jpg) — slide: 25 B; seed 20261127; STYLE transitions=zoom,wipe mood=piano; 11.1 s; THUMBNAIL_OFFSET_MS=4600. Frames checked (intro, slide, end card, cover): clean.
+
+## Scheduled this run (2026-11-24 06:51)
+Push check: OK ("Everything up-to-date"). Metricool not used. Claude Docs plan read (Week 2: Fri 27 Nov = Chinese New Year 2027 (6 Feb) + quote checklist). CNY 2027 date confirmed by web search (6 Feb 2027; Wayne State events calendar, calendardate.com, officeholidays.com) and matches the article's link preview. clearonlogistics.co.ke articles not fetched; no article figures used.
+Failed posts (last 48h): Buffer none; Buffer 2 IG 6b031d1dc72676f5e944559d already retried last run (24 Nov 13:00) — no new failures.
+Buffer 2 (IG 7/10, TikTok 8/10, Threads 8/10 before → 10/10 each):
+- Instagram 25 Nov 07:30 — A who-handles-what REEL (wipe_up, maritime, offset 5100); 08:00 — Story A (link sticker exw-vs-fob-india-to-kenya, UTM instagram _a); 10:00 — C tip-named-place
+- TikTok 25 Nov 18:00 — B price-tag VIDEO (zoom, piano, offset 4600); 20:30 — E fill-blank-india
+- Threads 25 Nov 18:00 — B price-tag (UTM threads _b); 20:30 — E fill-blank-india
+Buffer (X 8/10, Facebook 8/10, LinkedIn 9/10 before → 10/10 each):
+- X 25 Nov 17:00 — B price-tag (UTM x _b); 20:00 — D poll-india-terms
+- Facebook 26 Nov 10:00 — article link shipping-batteries-liquids-restricted-goods-china-to-kenya (UTM _link); 13:00 — 26 A batteries-solar CAROUSEL, 7 images (UTM _a)
+- LinkedIn 27 Nov 11:00 — article link chinese-new-year-2027-shipping-china-to-kenya (UTM _link) — seasonal post; date 6 Feb 2027 confirmed; general "factories commonly close" wording only.
+Still to do: 25 Nov IG 13:00 D / 18:00 B reel / 18:30 Story B (wa.me) / 20:30 E (IG full at 10); 26 Nov C/D/E cards, 26 stories (A = carousel slide 1) and B video, all Buffer 2 slots for 26; X 26; Facebook 26 17:00/20:00; LinkedIn 27 13:00/17:00 and 27 Nov set (CNY planning + quote checklist).

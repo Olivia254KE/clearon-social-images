@@ -313,3 +313,21 @@ Buffer (X 7/10, Facebook 8/10, LinkedIn 8/10 before → 10/10 each):
 - Facebook 26 Nov 17:00 — C spot-booking; 20:00 — B can-it-ship (UTM facebook _b)
 - LinkedIn 27 Nov 13:00 — A cny-work-back (seasonal, UTM linkedin _a); 17:00 — B quote-checklist (UTM linkedin _b)
 Still to do: IG 26 Nov all slots (A carousel 07:30 as reel, Story A 08:00 link batteries article, C, D, B reel, Story B wa.me, E); 26 E card and B video (can-it-ship); TikTok/Threads 26 18:00/20:30; X 26 17:00/20:00; Facebook 27; 27 C/D/E, stories and videos; LinkedIn 28+.
+
+## 2026-11-26 (Thu) — additions (run 2026-11-25 06:51)
+- E card `posters/2026-11-26_e_quote-can-it-ship.jpg` — quote card ("Words to ship by"): "Ask 'can it ship?' before you ask 'how much?'" — Clearon Logistics. New layout: pale blueprint grid "paper" background, teal-to-blue left edge band, navy Anton type with teal and blue-highlighted phrases, faded compass rose bottom right. No facts.
+- B video `posters/videos/2026-11-26_b_can-it-ship.mp4` (+ _cover.jpg) — slides: 26 B + 26 C; seed 20261128; STYLE transitions=split,split,wipe mood=maritime; 17.1 s; THUMBNAIL_OFFSET_MS=4600. Frames checked (intro, slide, mid-transition, end card, cover): clean.
+
+## Scheduled this run (2026-11-25 06:51)
+Push check: OK (clone on detached HEAD again; checked out main, reset to origin/main; dry-run "Everything up-to-date"). Metricool not used. Claude Docs plan read (Week 2; weekday rotation only, Sat 28 uses lane cycling → air vs sea). CNY 2027 = 6 Feb 2027 re-confirmed by web search (events.wayne.edu 2027-02-06, calendardate.com). Article fetch for marine-cargo-insurance-kenya-mandatory failed (permission not granted in unattended run), so not used; no article figures used.
+Failed posts (last 48h): Buffer none; Buffer 2 only IG 6b031d1dc72676f5e944559d (already retried 24 Nov) — nothing new.
+Note: Buffer 2 rejects Instagram firstComment ("requires a paid plan"); IG posts scheduled without first comment.
+Buffer 2 (IG 7/10, TikTok 8/10, Threads 8/10 before → 10/10 each):
+- Instagram 26 Nov 07:30 — A batteries-solar REEL (mix, pluck, offset 4600); 08:00 — Story A (link sticker shipping-batteries-liquids-restricted-goods-china-to-kenya, UTM instagram _a); 10:00 — C spot-booking
+- TikTok 26 Nov 18:00 — B can-it-ship VIDEO (split/wipe, maritime, offset 4600); 20:30 — E quote-can-it-ship
+- Threads 26 Nov 18:00 — B can-it-ship (UTM threads _b); 20:30 — E quote-can-it-ship
+Buffer (X 8/10, Facebook 8/10, LinkedIn 9/10 before → 10/10 each):
+- X 26 Nov 17:00 — B can-it-ship (UTM x _b); 20:00 — D this-or-that-solar
+- Facebook 27 Nov 10:00 — article link chinese-new-year-2027-shipping-china-to-kenya (UTM _link, seasonal); 13:00 — 27 A cny-work-back (UTM _a)
+- LinkedIn 28 Nov 11:00 — article link air-freight-vs-sea-freight-kenya (UTM _link); stable facts only (FCL/LCL definitions, air chargeable weight = greater of actual or volumetric).
+Still to do: IG 26 13:00 D, 18:00 B reel, 18:30 Story B (wa.me), 20:30 E; 27 C/D/E cards, stories and videos; all Buffer 2 slots for 27; X 27; Facebook 27 17:00/20:00; LinkedIn 28 13:00/17:00 and 28 Nov set.

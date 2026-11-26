@@ -331,3 +331,30 @@ Buffer (X 8/10, Facebook 8/10, LinkedIn 9/10 before → 10/10 each):
 - Facebook 27 Nov 10:00 — article link chinese-new-year-2027-shipping-china-to-kenya (UTM _link, seasonal); 13:00 — 27 A cny-work-back (UTM _a)
 - LinkedIn 28 Nov 11:00 — article link air-freight-vs-sea-freight-kenya (UTM _link); stable facts only (FCL/LCL definitions, air chargeable weight = greater of actual or volumetric).
 Still to do: IG 26 13:00 D, 18:00 B reel, 18:30 Story B (wa.me), 20:30 E; 27 C/D/E cards, stories and videos; all Buffer 2 slots for 27; X 27; Facebook 27 17:00/20:00; LinkedIn 28 13:00/17:00 and 28 Nov set.
+
+## 2026-11-27 (Fri) — cards, videos and stories added (run 2026-11-26 06:51)
+- C card `posters/2026-11-27_c_term-cut-off.jpg` — term of the day: CUT-OFF ("the latest time your cargo, or its documents, can be handed in to make a particular sailing or flight; miss it and the shipment waits for the next one"; stable general definition). New layout: navy blueprint grid, giant Anton word, teal dashed "cut line" with scissors disc, white definition card. Question: ever had cargo miss a cut-off?
+- D EXAMPLE SCENARIO CAROUSEL, 6 slides `posters/2026-11-27_d_fob-scenario_01.jpg` … `_06.jpg`, PDF `posters/docs/2026-11-27_d_fob-scenario.pdf` — "Picture this: a Nairobi hardware importer orders 8 CBM of plumbing fittings near Guangzhou on FOB Nansha terms. What happens next?" Steps: supplier's part under FOB (export clearance + loading at Nansha); compare LCL vs 20ft FCL; commercial invoice / packing list / bill of lading must match; Mombasa declaration, duties and taxes, release, delivery to Nairobi; "Your turn" WhatsApp CTA. EXAMPLE badge + progress bar + 4-stop route tracker (Nansha → At sea → Mombasa → Nairobi) on every slide (new). Stable Incoterms/process facts only; no figures.
+- E card `posters/2026-11-27_e_question-documents.jpg` — question of the day: which document do you chase your supplier for most? (commercial invoice, packing list, bill of lading, certificate of origin). Teal-to-blue gradient, giant faded "?", white option tiles (new layout).
+- A video `posters/videos/2026-11-27_a_cny-work-back.mp4` (+ _cover.jpg) — slides 27 A + 27 C; seed 20261128; STYLE transitions=wipe,wipe,wipe mood=piano; 19.1 s; THUMBNAIL_OFFSET_MS=5100. Frames checked (intro, slides, mid-wipe, end card, cover): clean.
+- B video `posters/videos/2026-11-27_b_quote-checklist.mp4` (+ _cover.jpg) — slide 27 B; seed 20261129; STYLE transitions=wipe_up,wipe mood=ambient; 12.1 s; THUMBNAIL_OFFSET_MS=5100. Frames checked: clean.
+- Stories: `posters/stories/2026-11-27_a_cny-work-back_story.jpg`, `posters/stories/2026-11-27_b_quote-checklist_story.jpg`.
+
+## 2026-11-28 (Sat) — theme: air vs sea (lane cycling; article air-freight-vs-sea-freight-kenya/)
+- A poster `posters/2026-11-28_a_weigh-air-sea.jpg` — educational: "Air or sea? Weigh 4 things": size and weight, how soon, value (cost of holding stock), cost to your door. Balance-scale illustration (plane pan vs ship pan) over sky-to-sea navy gradient with clouds and wave lines, 2×2 outlined tiles (new layout). No figures.
+- B poster `posters/2026-11-28_b_four-details.jpg` — CTA: "Send us 4 details. Get air and sea, side by side": what it is, how much, how big, where and when; teal WhatsApp bar. Pale paper with a teal measuring-tape band and diagonal navy band (new layout). No figures.
+- C, D, E, stories and videos: not made yet.
+
+## Scheduled this run (2026-11-26 06:51)
+Push check: OK (clone on detached HEAD again; checked out main = origin/main; dry-run "Everything up-to-date"). Metricool not used. Claude Docs plan not re-read (27 theme from log; 28 lane cycling per last run's note). clearonlogistics.co.ke articles not fetched; no article figures used. LOG had no entry for the 2026-11-25 14:51 run (it appears not to have run or not to have logged); queues read directly from Buffer.
+Failures: Buffer 2 Threads 6b050a83db52b449cf224b6b (25 Nov 18:00, B price-tag) error "Threads is having issues with processing the attached media" → re-encoded as baseline JPEG without ICC profile `posters/2026-11-25_b_price-tag_v2.jpg`, retried once on Threads 27 Nov 20:30 (same caption). Failed post left in place. Buffer: no failures.
+Buffer 2 (IG 3/10, TikTok 5/10, Threads 5/10 before → 10/10 each):
+- Instagram 26 Nov 13:00 — D this-or-that-solar; 18:00 — B can-it-ship REEL (split/wipe, maritime, offset 4600); 18:30 — Story B (link sticker wa.me); 20:30 — E quote-can-it-ship
+- Instagram 27 Nov 07:30 — A cny-work-back REEL (wipe, piano, offset 5100); 08:00 — Story A (link sticker chinese-new-year-2027-shipping-china-to-kenya, UTM instagram _a); 10:00 — C term-cut-off
+- TikTok 27 Nov 07:30 — A VIDEO; 10:00 — C term-cut-off; 13:00 — D fob-scenario CAROUSEL 6 images (example scenario); 18:00 — B quote-checklist VIDEO (wipe_up, ambient, offset 5100); 20:30 — E question-documents
+- Threads 27 Nov 07:30 — A (UTM threads _a); 10:00 — C; 13:00 — D CAROUSEL 6 images; 18:00 — B (UTM threads _b, reading-a-clearing-agent-quote); 20:30 — retry of 25 B price-tag (v2 image). 27 E not on Threads (slot used by retry).
+Buffer (X 5/10, Facebook 6/10, LinkedIn 7/10 before → 10/10 each):
+- X 27 Nov 08:00 — article link chinese-new-year-2027-shipping-china-to-kenya (UTM x _link); 10:30 — A (UTM x _a); 12:00 — C term-cut-off; 17:00 — B (UTM x _b); 20:00 — D carousel slides 1,2,3,6
+- Facebook 27 Nov 17:00 — C term-cut-off; 20:00 — B quote-checklist (UTM facebook _b); 28 Nov 10:00 — article link air-freight-vs-sea-freight-kenya (UTM _link); 13:00 — 28 A weigh-air-sea (UTM _a)
+- LinkedIn 28 Nov 13:00 — A weigh-air-sea (UTM linkedin _a); 17:00 — B four-details (UTM linkedin _b); 29 Nov 11:00 — article link incoterms-explained-kenya-import (UTM _link; general Incoterms wording only)
+Still to do: 28 C/D/E cards, 28 videos and stories; all Buffer 2 slots for 28; X 28; Facebook 28 17:00/20:00; LinkedIn 29 13:00/17:00; Sunday 29 recap carousel ("This week's 5 import tips", Poster A) and 29 set.

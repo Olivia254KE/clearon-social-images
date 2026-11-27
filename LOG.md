@@ -392,3 +392,24 @@ Buffer (X 7/10, Facebook 8/10, LinkedIn 8/10 before → 10/10 each):
 - Facebook 28 Nov 17:00: C myth; 20:00: B four-details (UTM facebook _b)
 - LinkedIn 29 Nov 13:00: A recap CAROUSEL as PDF document (UTM linkedin _a → pre-shipment-inspection-china-to-kenya/); 17:00: B three-papers (UTM linkedin _b → supplier-documents-checklist-china-to-kenya/)
 Still to do: 28 E card, 28 B video, 28 stories; Instagram from 28 Nov 07:30; TikTok/Threads 28 18:00 and 20:30; X 28 17:00 and 20:00; Facebook 29; LinkedIn 30; the 29 set (C/D/E, videos, stories).
+
+## 2026-11-28 (Sat) — E card, B video and A story added (run 2026-11-27 06:51)
+- E card `posters/2026-11-28_e_quote-planning-door.jpg`: quote card (WORDS TO SHIP BY), original line "Freight gets it to Mombasa. Planning gets it to your door." — Clearon Logistics. New layout: night-navy gradient with a blue glow, SVG quote marks, and a port-to-door strip (crane and containers on the quay, a truck on a dashed road, a teal door). No facts. Question: which step after the port has caught you out before? QA: fixed (round 1: truck lowered onto the road line).
+- B video `posters/videos/2026-11-28_b_four-details.mp4` (+ _cover.jpg): slide 28 B four-details; seed 20261129; --slide-seconds 7; STYLE transitions=wipe,wipe mood=maritime; 12.1 s; THUMBNAIL_OFFSET_MS=5100. QA: fixed (round 1: split intro squeeze left a near-empty frame → re-rendered with diagonal wipe; grey blur fill → template now tints the blur toward deep navy).
+- Story `posters/stories/2026-11-28_a_two-routes_story.jpg`. QA: pass.
+- Template change: `tools/make_video.py` to_vertical() now blends the blurred fill 45% toward #001a35 so light posters no longer leave a flat grey band (tested on 28 B; no option removed).
+
+## Scheduled this run (2026-11-27 06:51)
+Push check: OK (clone on detached HEAD; checked out main = origin/main; dry-run "Everything up-to-date"). Metricool not used. Claude Docs plan not re-read; lane cycling continued.
+Article read: lcl-shipping-india-to-kenya/ could not be fetched (web fetch permission not answered in this unattended run); the LinkedIn caption uses general LCL definitions only, no article figures. Buffer's link preview confirmed the page is live ("LCL Shipping from India to Kenya: Consolidation, Cut-Offs and Customs Explained").
+Quality gate: 3 new assets (E card, B video + cover, A story) and 12 captions; independent reviewer agent. First time: 1 asset and 11 captions passed. Fixed: E truck position, B video transition and blur fill, FB 29 link caption (removed a line repeating the recap's named-place tip). Nothing dropped.
+Failures: none new. Threads 6b050a83db52b449cf224b6b (25 Nov) was already retried (27 Nov 20:30, v2 image); not retried again.
+Buffer 2 (IG 7/10, TikTok 8/10, Threads 8/10 before → 10/10 each):
+- Instagram 28 Nov 07:30: A two-routes REEL (zoom/pluck, offset 5100); 08:00: Story A (link sticker air-freight-vs-sea-freight-kenya, UTM instagram 2026-11-28_a); 10:00: C myth-air-customs
+- TikTok 28 Nov 18:00: B four-details VIDEO (wipe/maritime, offset 5100); 20:30: E quote-planning-door
+- Threads 28 Nov 18:00: B four-details (UTM threads _b); 20:30: E quote-planning-door
+Buffer (X 8/10, Facebook 8/10, LinkedIn 9/10 before → 10/10 each):
+- X 28 Nov 17:00: B four-details (UTM x _b); 20:00: D lcl-share
+- Facebook 29 Nov 10:00: article link incoterms-explained-kenya-import (UTM facebook 2026-11-29_link); 13:00: A recap CAROUSEL, 7 images (UTM facebook _a → pre-shipment-inspection-china-to-kenya/)
+- LinkedIn 30 Nov 11:00: article link lcl-shipping-india-to-kenya (UTM linkedin 2026-11-30_link)
+Still to do: Instagram from 28 Nov 13:00 (D, B reel, Story B, E); TikTok/Threads 29; X 29; Facebook 29 17:00/20:00; LinkedIn 30 13:00/17:00; the 29 C/D/E cards, 29 B video, 29 stories; the 30 set (Mon, suggested India lane: LCL from India).

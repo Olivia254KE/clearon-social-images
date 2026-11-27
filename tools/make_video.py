@@ -10,7 +10,7 @@ are placed on a blurred, darkened 9:16 background automatically.
 Prints THUMBNAIL_OFFSET_MS (pass it to Buffer as the video's thumbnailOffset)
 and writes <out>_cover.jpg, a cover frame taken from the middle of the first slide.
 
-Structure (about 1.6 s intro + 6 s per slide, adjustable with --slide-seconds, + 3.5 s end card):
+Structure (about 1.6 s intro + 6 s per slide, adjustable with --slide-seconds, + 5 s end card, adjustable with --end-seconds):
   - Intro: deep navy, logo scales in, teal rule draws across, short tagline.
   - Slides: slow push-in on each slide.
   - Transitions: eased brand wipe (teal panel, then navy panel, angled edges)
@@ -34,7 +34,7 @@ W, H, FPS = 1080, 1920, 30
 NAVY, DEEP, TEAL, BLUE = (0, 34, 68), (0, 26, 53), (0, 185, 171), (48, 121, 255)
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-INTRO, SLIDE, TRANS, END = 1.6, 6.0, 0.8, 3.5
+INTRO, SLIDE, TRANS, END = 1.6, 6.0, 0.8, 5.0
 
 
 # ---------- helpers ----------
@@ -349,9 +349,12 @@ def main():
                     help='soundtrack style; auto picks from the seed')
     ap.add_argument('--slide-seconds', type=float, default=None,
                     help='seconds each slide stays on screen (default 6.0; use 7-8 for text-heavy posters)')
+    ap.add_argument('--end-seconds', type=float, default=None,
+                    help='seconds the WhatsApp end card holds (default 5.0, long enough to note the number)')
     a = ap.parse_args()
-    global SLIDE
+    global SLIDE, END
     if a.slide_seconds: SLIDE = a.slide_seconds
+    if a.end_seconds: END = a.end_seconds
 
     nm = find_node_modules(a.node_modules)
     cards = render_cards(nm, a.headline.upper())

@@ -66,6 +66,8 @@ def to_vertical(path):
     l, t = (bg.width - W) // 2, (bg.height - H) // 2
     bg = bg.crop((l, t, l + W, t + H)).filter(ImageFilter.GaussianBlur(40))
     bg = ImageEnhance.Brightness(bg).enhance(0.55)
+    # tint the blurred fill toward deep navy so light posters never leave a flat grey band
+    bg = Image.blend(bg, Image.new('RGB', (W, H), (0, 26, 53)), 0.45)
     fg = im.resize((W, int(im.height * W / im.width)), Image.LANCZOS)
     bg.paste(fg, (0, (H - fg.height) // 2))
     return bg

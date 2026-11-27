@@ -413,3 +413,34 @@ Buffer (X 8/10, Facebook 8/10, LinkedIn 9/10 before → 10/10 each):
 - Facebook 29 Nov 10:00: article link incoterms-explained-kenya-import (UTM facebook 2026-11-29_link); 13:00: A recap CAROUSEL, 7 images (UTM facebook _a → pre-shipment-inspection-china-to-kenya/)
 - LinkedIn 30 Nov 11:00: article link lcl-shipping-india-to-kenya (UTM linkedin 2026-11-30_link)
 Still to do: Instagram from 28 Nov 13:00 (D, B reel, Story B, E); TikTok/Threads 29; X 29; Facebook 29 17:00/20:00; LinkedIn 30 13:00/17:00; the 29 C/D/E cards, 29 B video, 29 stories; the 30 set (Mon, suggested India lane: LCL from India).
+
+## 2026-11-29 (Sun) — C and D cards, A recap video (run 2026-11-27 14:51)
+- C card `posters/2026-11-29_c_poll-origin.jpg`: QUICK POLL, "Where does your next order ship from?" A China / B India / C Both. New layout: bright blue #3079ff field with fine diagonal stripes, a faint giant "?", three full-width white option rows with coloured letter tiles. No facts. QA: fixed (round 1: the first version's dotted route map echoed 28 A two-routes, so it was rebuilt without it; sub-labels enlarged to 26px).
+- D card `posters/2026-11-29_d_term-transshipment.jpg`: TERM OF THE DAY, TRANSSHIPMENT ("when cargo is moved from one vessel to another at a port along the way, before it reaches its destination"; stable shipping definition). New layout: light paper with a teal-to-blue left edge band, dictionary-style entry, white route card (vessel 1 → hub port → vessel 2 to Mombasa), tip "ask whether your sailing is direct or goes via a transshipment port". QA: pass (sub-labels darkened). (A first idea, CONSIGNEE, was dropped before review because it overlapped 29 B's documents topic.)
+- A video `posters/videos/2026-11-29_a_week-tips.mp4` (+ _cover.jpg): hook slide re-made for video (counter, progress line and Swipe button removed, "All 5 in 40 seconds" pill; source `/home/claude/work` only, not in repo) + recap slides 02–06; seed 20261129; STYLE transitions=zoom,split,wipe_up,wipe,zoom,split,wipe (mix) mood=pluck; --end-seconds 5.5; 43.1 s; THUMBNAIL_OFFSET_MS=4600. QA: fixed (round 1: carousel UI on the hook/cover; end card too short).
+- E, B video, stories for 29: not made yet.
+
+## 2026-11-30 (Mon) — theme: LCL from India (lane cycling; article lcl-shipping-india-to-kenya/)
+- A poster `posters/2026-11-30_a_cbm-count.jpg`: educational "Shipping LCL? Start with your CBM." Top: light blueprint drawing sheet with a teal 3D carton and dimension brackets (0.60 m × 0.40 m × 0.50 m). Bottom: navy panel with 3 steps (measure L×W×H in metres; 0.60 × 0.40 × 0.50 = 0.12 CBM; 0.12 × 50 cartons = 6 CBM) and a tip to put carton sizes on the packing list. Arithmetic only, no rates. New layout. QA: fixed (round 1: Poppins × sign for legibility; 0.50 m label moved beside the bracket).
+- B poster `posters/2026-11-30_b_talk-first.jpg`: CTA "Buying from India? Talk to us first." Light base with a dark split-flap departure-board panel (INDIA → KENYA, "we go through": TERMS EXW or FOB with a named place; MODE LCL, FCL or air; DOCS invoice, packing list, bill of lading; COSTS itemised to your door) and a blue WhatsApp bar. Clearon service claims only. New layout. QA: fixed (round 1: navy base and tick circles echoed 29 B; moved to light base, ticks removed).
+- C, D, E, videos and stories for 30: not made yet.
+
+## 2026-11-28 (Sat) — Story B added
+- `posters/stories/2026-11-28_b_four-details_story.jpg`: poster on solid navy gradient bands (#002244 → #001a35), no blur. QA: fixed (round 1: the blurred fill looked muddy).
+
+## Template change (2026-11-27 14:51)
+`tools/make_video.py`: new `--end-seconds` option; default end card hold raised from 3.5 s to 5.0 s so viewers can note the number (reviewer finding). Tested on the 29 A recap video; no existing option removed.
+
+## Scheduled this run (2026-11-27 14:51)
+Push check: OK (clone on detached HEAD; checked out main = origin/main; dry-run "Everything up-to-date"). Metricool not used. Claude Docs plan read (Week 2 runs Tue 24 – Mon 30 Nov; Mon row = compliance/pre-shipment inspection, already covered Mon 23 and in the Sunday recap, so 30 Nov keeps the India LCL lane already linked on LinkedIn 30 11:00). No web-fetch tool in this run; no Clearon article figures used.
+Quality gate: 6 new assets (2 cards, 2 posters, 1 story, 1 video + cover) and 17 captions; independent reviewer agent. First time: 1 asset (D) and 12 captions passed. Fixed: C layout (freshness), A × legibility and label, B base (freshness), story fill, video hook UI and end-card length, IG captions (wa.me URL removed, "link in bio"), 2 TikTok captions ("link in bio" added). Round 2: all passed. Nothing dropped.
+Failures: none new in the last 48 h (Threads 6b050a83db52b449cf224b6b, 25 Nov, was already retried). Buffer: none.
+Buffer 2 (IG 6/10, TikTok 7/10, Threads 7/10 before → 10/10 each):
+- Instagram 28 Nov 13:00: D lcl-share; 18:00: B four-details REEL (wipe/maritime, offset 5100); 18:30: Story B (link sticker wa.me); 20:30: E quote-planning-door
+- TikTok 29 Nov 07:30: A week-tips VIDEO (mix/pluck, offset 4600); 10:00: C poll-origin; 13:00: D term-transshipment
+- Threads 29 Nov 07:30: A recap CAROUSEL 7 images (UTM threads 2026-11-29_a → pre-shipment-inspection-china-to-kenya/); 10:00: C; 13:00: D
+Buffer (X 7/10, Facebook 8/10, LinkedIn 8/10 before → 10/10 each):
+- X 29 Nov 08:00: article link incoterms-explained-kenya-import (UTM x 2026-11-29_link); 10:30: A recap slides 1,2,3,7 (UTM x _a); 12:00: C poll (3 X posts on Sunday, per INSIGHTS)
+- Facebook 29 Nov 17:00: C poll; 20:00: B three-papers (UTM facebook _b → supplier-documents-checklist-china-to-kenya/)
+- LinkedIn 30 Nov 13:00: A cbm-count (UTM linkedin 2026-11-30_a → lcl-shipping-india-to-kenya/); 17:00: B talk-first (UTM linkedin _b, same article)
+Still to do: Instagram from 29 Nov 07:30 (A recap reel 07:30, Story A 08:00 link pre-shipment-inspection, C, D, B reel, Story B, E); TikTok/Threads 29 18:00 and 20:30 (29 B video three-papers, 29 E); X 29 17:00/20:00; Facebook 30; LinkedIn 1 Dec; 29 E card, 29 B video, 29 stories; 30 C/D/E, videos, stories.

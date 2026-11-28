@@ -35,6 +35,7 @@ NAVY, DEEP, TEAL, BLUE = (0, 34, 68), (0, 26, 53), (0, 185, 171), (48, 121, 255)
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 INTRO, SLIDE, TRANS, END = 1.6, 6.0, 0.8, 5.0
+MOTION = 'still'
 
 
 # ---------- helpers ----------
@@ -56,20 +57,40 @@ def find_node_modules(hint):
     sys.exit('Fonts not found: run `npm install @fontsource/anton @fontsource/poppins` first.')
 
 
+BACKDROP = None   # optional real photo (path) used behind 4:5 posters and on the intro/end cards
+
+
+def brand_frame():
+    """Clean 9:16 brand frame: deep navy vertical gradient, or a darkened real photo if --backdrop is set.
+    (Replaces the old blurred copy of the poster, which looked smeared and artificial.)"""
+    if BACKDROP:
+        ph = Image.open(BACKDROP).convert('RGB')
+        s = max(W / ph.width, H / ph.height)
+        ph = ph.resize((round(ph.width * s), round(ph.height * s)), Image.LANCZOS)
+        l, t = (ph.width - W) // 2, (ph.height - H) // 2
+        ph = ph.crop((l, t, l + W, t + H))
+        ph = ImageEnhance.Brightness(ph).enhance(0.45)
+        return Image.blend(ph, Image.new('RGB', (W, H), DEEP), 0.40)
+    g = np.linspace(0, 1, H)[:, None, None]
+    top, bot = np.array(NAVY, float), np.array(DEEP, float)
+    arr = (top * (1 - g) + bot * g) * np.ones((1, W, 1))
+    return Image.fromarray(arr.astype(np.uint8))
+
+
 def to_vertical(path):
     im = Image.open(path).convert('RGB')
+    if im.size == (W, H):
+        return im
     if abs(im.width / im.height - 9 / 16) < 0.02:
         return im.resize((W, H), Image.LANCZOS)
-    bg = im.copy()
-    s = max(W / bg.width, H / bg.height)
-    bg = bg.resize((int(bg.width * s) + 1, int(bg.height * s) + 1), Image.LANCZOS)
-    l, t = (bg.width - W) // 2, (bg.height - H) // 2
-    bg = bg.crop((l, t, l + W, t + H)).filter(ImageFilter.GaussianBlur(40))
-    bg = ImageEnhance.Brightness(bg).enhance(0.55)
-    # tint the blurred fill toward deep navy so light posters never leave a flat grey band
-    bg = Image.blend(bg, Image.new('RGB', (W, H), (0, 26, 53)), 0.45)
-    fg = im.resize((W, int(im.height * W / im.width)), Image.LANCZOS)
-    bg.paste(fg, (0, (H - fg.height) // 2))
+    bg = brand_frame()
+    # the poster is placed 1:1 (no resampling when it is 1080 wide) so text stays pixel-sharp
+    fg = im if im.width == W else im.resize((W, round(im.height * W / im.width)), Image.LANCZOS)
+    y = (H - fg.height) // 2
+    bg.paste(fg, (0, y))
+    d = ImageDraw.Draw(bg)
+    d.rectangle((0, y - 4, W, y - 1), fill=TEAL)                    # thin teal rules frame the poster
+    d.rectangle((0, y + fg.height, W, y + fg.height + 3), fill=TEAL)
     return bg
 
 
@@ -85,9 +106,7 @@ def render_cards(nm, headline):
     *{{margin:0;padding:0;box-sizing:border-box}}
     body{{width:{W}px;height:{H}px;overflow:hidden;font-family:Poppins;color:#fff;
       background:radial-gradient(120% 80% at 50% 35%,#003366 0%,#002244 45%,#001a35 100%)}}
-    .grid{{position:absolute;inset:0;opacity:.07;background-image:
-      linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px);
-      background-size:90px 90px}}
+    .grid{{display:none}}
     .c{{position:absolute;left:0;right:0;text-align:center}}
     """
     intro_html = f"""<html><head><style>{css}</style></head><body><div class=grid></div>
@@ -118,12 +137,21 @@ def render_cards(nm, headline):
 
 
 # ---------- visuals ----------
-def push_in(img, p, amount=0.04):
-    s = 1 + amount * p
-    w, h = int(W * s), int(H * s)
-    big = img.resize((w, h), Image.BILINEAR)
-    l, t = (w - W) // 2, (h - H) // 2
-    return big.crop((l, t, l + W, t + H))
+def push_in(img, p, amount=0.0, progress=True):
+    """Hold the slide pixel-exact. A thin teal progress line runs along the bottom band
+    (below 4:5 posters) so the frame still feels alive without resampling the text."""
+    f = img.copy()
+    if MOTION == 'zoom' and amount:
+        s = 1 + amount * p
+        w, h = W * s, H * s
+        f = img.transform((W, H), Image.AFFINE, (1 / s, 0, (w - W) / 2 / s, 0, 1 / s, (h - H) / 2 / s), Image.BICUBIC)
+    if not progress:          # first slide doubles as the video cover: keep it free of player-like UI
+        return f
+    d = ImageDraw.Draw(f)
+    y = 1700
+    d.rectangle((90, y, W - 90, y + 3), fill=(0, 60, 95))
+    d.rectangle((90, y, 90 + int((W - 180) * ease(p)), y + 3), fill=TEAL)
+    return f
 
 
 def wipe(a, b, p):
@@ -182,13 +210,13 @@ def zoom_fade(a, b, p):
         q = ease(p * 2)
         s = 1 + 0.10 * q
         w, h = int(W * s), int(H * s)
-        big = a.resize((w, h), Image.BILINEAR).crop(((w - W) // 2, (h - H) // 2, (w - W) // 2 + W, (h - H) // 2 + H))
+        big = a.resize((w, h), Image.BICUBIC).crop(((w - W) // 2, (h - H) // 2, (w - W) // 2 + W, (h - H) // 2 + H))
         f = Image.blend(big, navy, q)
     else:
         q = ease((p - 0.5) * 2)
         s = 1.06 - 0.06 * q
         w, h = int(W * s), int(H * s)
-        big = b.resize((w, h), Image.BILINEAR).crop(((w - W) // 2, (h - H) // 2, (w - W) // 2 + W, (h - H) // 2 + H))
+        big = b.resize((w, h), Image.BICUBIC).crop(((w - W) // 2, (h - H) // 2, (w - W) // 2 + W, (h - H) // 2 + H))
         f = Image.blend(navy, big, q)
     if 0.35 < p < 0.65:
         d = ImageDraw.Draw(f)
@@ -331,7 +359,7 @@ def soundtrack(total, trans_times, seed, mood='piano'):
     fade[:int(0.05 * sr)] = np.linspace(0, 1, int(0.05 * sr))
     out *= fade
     out = np.tanh(out * 1.4) / np.tanh(1.4)
-    out /= max(1e-9, np.max(np.abs(out))) / 0.85
+    out /= max(1e-9, np.max(np.abs(out))) / 0.74   # about -2.6 dBFS sample peak: headroom so AAC never overshoots 0 dBTP
     return out[:end], sr
 
 
@@ -351,8 +379,13 @@ def main():
                     help='seconds each slide stays on screen (default 6.0; use 7-8 for text-heavy posters)')
     ap.add_argument('--end-seconds', type=float, default=None,
                     help='seconds the WhatsApp end card holds (default 5.0, long enough to note the number)')
+    ap.add_argument('--backdrop', default=None,
+                    help='optional real photo (e.g. brand/backgrounds/x.jpg) shown darkened behind 4:5 posters')
+    ap.add_argument('--motion', default='still', choices=['still', 'zoom'],
+                    help='still (default): slides held pixel-sharp; zoom: slow bicubic push-in')
     a = ap.parse_args()
-    global SLIDE, END
+    global SLIDE, END, BACKDROP, MOTION
+    BACKDROP, MOTION = a.backdrop, a.motion
     if a.slide_seconds: SLIDE = a.slide_seconds
     if a.end_seconds: END = a.end_seconds
 
@@ -393,13 +426,14 @@ def main():
         kind = segs[i][0]
         if kind == 'intro': return intro_frame(cards['intro'], logo, local)
         if kind == 'end': return end_frame(cards['end'], local)
-        return push_in(slides[i - 1], local / SLIDE)
+        return push_in(slides[i - 1], local / SLIDE, 0.03 if MOTION == 'zoom' else 0.0, progress=i > 1)
 
     os.makedirs(os.path.dirname(os.path.abspath(a.out)), exist_ok=True)
     ff = subprocess.Popen(['ffmpeg', '-y', '-loglevel', 'error', '-f', 'rawvideo', '-pix_fmt', 'rgb24',
                            '-s', f'{W}x{H}', '-r', str(FPS), '-i', '-', '-i', wav,
-                           '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '21', '-pix_fmt', 'yuv420p',
-                           '-c:a', 'aac', '-b:a', '160k', '-shortest', '-movflags', '+faststart', a.out],
+                           '-c:v', 'libx264', '-preset', 'slow', '-crf', '14', '-profile:v', 'high', '-tune', 'stillimage',
+                           '-g', '60', '-pix_fmt', 'yuv420p',
+                           '-c:a', 'aac', '-b:a', '256k', '-af', 'lowpass=f=15000', '-shortest', '-movflags', '+faststart', a.out],
                           stdin=subprocess.PIPE)
     half = TRANS / 2
     for fi in range(nframes):
@@ -416,11 +450,21 @@ def main():
                 frame = TRANSITIONS[styles[k - 1]](prev_f, next_f, p)
         ff.stdin.write(frame.tobytes())
     ff.stdin.close(); ff.wait()
+    # size guard: still slides compress to a few MB at CRF 14; motion-heavy videos (--motion zoom,
+    # photo backdrops) can exceed the 15 MB limit, so step the quality down only as far as needed
+    for crf in (17, 20, 23):
+        if os.path.getsize(a.out) < 14.5e6:
+            break
+        tmp_out = a.out + '.tmp.mp4'
+        subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-i', a.out, '-c:v', 'libx264', '-preset', 'slow',
+                        '-crf', str(crf), '-profile:v', 'high', '-g', '60', '-pix_fmt', 'yuv420p', '-c:a', 'copy',
+                        '-movflags', '+faststart', tmp_out], check=True)
+        os.replace(tmp_out, a.out)
+        print(f'SIZE_GUARD re-encoded at crf {crf}')
     # cover / thumbnail: the middle of the first slide (the poster itself, fully visible)
     thumb_ms = int((INTRO + SLIDE / 2) * 1000)
     cover = os.path.splitext(a.out)[0] + '_cover.jpg'
-    subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-ss', f'{thumb_ms / 1000:.2f}', '-i', a.out,
-                    '-frames:v', '1', '-q:v', '2', cover], check=True)
+    seg_frame(1, SLIDE / 2).save(cover, 'JPEG', quality=95)
     print(a.out, f'{total:.1f}s')
     print(f'THUMBNAIL_OFFSET_MS={thumb_ms}')
     print(f'COVER_JPG={cover}')

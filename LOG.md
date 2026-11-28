@@ -444,3 +444,23 @@ Buffer (X 7/10, Facebook 8/10, LinkedIn 8/10 before → 10/10 each):
 - Facebook 29 Nov 17:00: C poll; 20:00: B three-papers (UTM facebook _b → supplier-documents-checklist-china-to-kenya/)
 - LinkedIn 30 Nov 13:00: A cbm-count (UTM linkedin 2026-11-30_a → lcl-shipping-india-to-kenya/); 17:00: B talk-first (UTM linkedin _b, same article)
 Still to do: Instagram from 29 Nov 07:30 (A recap reel 07:30, Story A 08:00 link pre-shipment-inspection, C, D, B reel, Story B, E); TikTok/Threads 29 18:00 and 20:30 (29 B video three-papers, 29 E); X 29 17:00/20:00; Facebook 30; LinkedIn 1 Dec; 29 E card, 29 B video, 29 stories; 30 C/D/E, videos, stories.
+
+## 2026-11-29 (Sun) — E card, B video, Story A added (run 2026-11-28 06:51)
+- E card `posters/2026-11-29_e_this-or-that-restock.jpg`: THIS OR THAT, "Restocking for Q1? Pick your plan." 1) one full container (FCL, whole order ships together) or 2) smaller LCL shipments (split across the quarter). New layout: deep navy blueprint grid, two stacked full-width option rows (white row with an SVG container on a chassis; deep-teal-to-blue row with carton groups) and an "OR" badge between them. Facts: stable FCL/LCL definitions only. QA: fixed (round 1: panel 2 gradient darkened to #007f76→#1f4fbf for white-text contrast; headline moved down from the logo).
+- Story A `posters/stories/2026-11-29_a_week-tips_story.jpg`: native 9:16 "Weekly recap" (5 tips restated exactly as in the recap, cue "Tip 1 in depth: tap the link for the guide ↓", header below the IG top bar, footer above the bottom 250px, clear sticker zone ≈1360–1560). QA: fixed over 3 rounds (1: the pasted carousel slide with swipe UI was replaced by this native layout; 2: Story safe zones and "Save this" pill; 3: simplified spacing to open the sticker zone — final passed).
+- B video `posters/videos/2026-11-29_b_three-papers.mp4` (+ _cover.jpg): slide 29 B; seed 20261130; --slide-seconds 7; STYLE transitions=wipe_up,wipe mood=piano; 13.6 s; THUMBNAIL_OFFSET_MS=5100. QA: pass.
+- Reused and re-checked: 30 A cbm-count, 29 C poll-origin, 29 B three-papers, 29 A week-tips video. QA: pass.
+
+## Scheduled this run (2026-11-28 06:51)
+Push check: OK (detached HEAD → checked out main = origin/main; dry-run "Everything up-to-date"). Metricool not used. Claude Docs plan read: Week 3 Tue 1 Dec = air freight via Guangzhou Baiyun and Hong Kong. No web-fetch tool; no article figures used.
+Quality gate: 3 new assets (E card, Story A, B video + cover), 4 reused assets, 12 captions; independent reviewer agent. First time: B video, the 4 reused assets and 8 captions passed. Fixed: E contrast and spacing; Story A rebuilt as native 9:16 (3 rounds); 2 X captions (WhatsApp ask added); LinkedIn (dropped the unconfirmed "delivery to your door"); IG reel ("Guides: link in bio"). Nothing dropped.
+Failures: none in the last 48 h on either account. Note: IG firstComment rejected ("First comment requires a paid plan"), so the 2 IG posts were re-sent without it (no failed post was created).
+Buffer 2 (IG 7/10, TikTok 8/10, Threads 8/10 → 10/10 each):
+- Instagram 29 Nov 07:30: A week-tips REEL (mix/pluck, offset 4600); 08:00: Story A (link sticker → pre-shipment-inspection-china-to-kenya/, UTM instagram 2026-11-29_a); 10:00: C poll-origin
+- TikTok 29 Nov 18:00: B three-papers VIDEO (wipe_up/piano, offset 5100); 20:30: E this-or-that-restock
+- Threads 29 Nov 18:00: B three-papers (UTM threads _b → supplier-documents-checklist-china-to-kenya/); 20:30: E this-or-that-restock
+Buffer (X 8/10, Facebook 8/10, LinkedIn 9/10 → 10/10 each):
+- X 30 Nov 08:00: article link lcl-shipping-india-to-kenya (UTM x 2026-11-30_link); 10:30: A cbm-count (UTM x _a). X 29 17:00/20:00 left empty on purpose (INSIGHTS: keep Sundays light on X).
+- Facebook 30 Nov 10:00: article link lcl-shipping-india-to-kenya (UTM facebook _link); 13:00: A cbm-count (UTM facebook _a)
+- LinkedIn 1 Dec 11:00: article link air-freight-china-to-kenya-guangzhou-hong-kong (UTM linkedin 2026-12-01_link)
+Still to do: Instagram from 29 Nov 13:00 (D, B reel, Story B, E); TikTok/Threads 30; X 30 12:00+; Facebook 30 17:00/20:00; LinkedIn 1 Dec 13:00/17:00; 29 Story B; 30 C/D/E, videos, stories; the 1 Dec set (Week 3 Tue: air freight via Guangzhou Baiyun and Hong Kong).

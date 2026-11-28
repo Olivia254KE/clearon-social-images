@@ -21,7 +21,7 @@ of format data. Treat everything below as "keep current mix" unless it says othe
   final delivery or pickup after clearance, so "cleared and delivered" wording is allowed.
 - Photo library: brand/backgrounds/ (37 vetted Unsplash photos, credits in brand/backgrounds/CREDITS.md). The owner
   has allowed images.unsplash.com and images.pexels.com, so runs may add more: free Unsplash/Pexels licence only
-  (never Unsplash+ or Getty), check every photo at full resolution (crop it) for faces and faces and the forbidden
+  (never Unsplash+ or Getty), check every photo at full resolution (crop it) for faces and the forbidden
   company types above, add a CREDITS.md line, and
   have the reviewer re-check it. Wanted next: container truck on a road, cargo plane loading, warehouse, Mombasa-like port.
   Never use other workarounds to reach blocked sites. First example in the new style: posters/2026-11-30_b_talk-first_v2.jpg.

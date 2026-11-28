@@ -11,8 +11,12 @@ of format data. Treat everything below as "keep current mix" unless it says othe
   shipping-line/airline/courier logos.
 - Never use AI-generated images or anything that imitates a photo. No grid/blueprint line textures. No blurred copy of
   the poster as a background (Stories: native 9:16 layout, or the poster 1:1 on a clean navy gradient).
-- Photo hosts are blocked from the shell; do not try workarounds (no GitHub Actions, proxies or mirrors). If
-  brand/backgrounds/ is empty, use clean flat brand colours and strong type, and say in the summary that photos are missing.
+- Photo library: brand/backgrounds/ (12 vetted Unsplash photos, credits in brand/backgrounds/CREDITS.md). The owner
+  has allowed images.unsplash.com and images.pexels.com, so runs may add more: free Unsplash/Pexels licence only
+  (never Unsplash+ or Getty), check every photo at full resolution (crop it) for faces and ANY readable company,
+  shipping-line, terminal, airline or equipment brand (most port photos fail this), add a CREDITS.md line, and
+  have the reviewer re-check it. Wanted next: container truck on a road, cargo plane loading, warehouse, Mombasa-like port.
+  Never use other workarounds to reach blocked sites. First example in the new style: posters/2026-11-30_b_talk-first_v2.jpg.
 - Videos must be as sharp as the stills: use tools/make_video.py as it is now (posters placed 1:1, clean navy frame,
   high-quality encode). Keep --motion still for text posters; never re-add blur fills, grids or lower encoder quality.
 - Everything must look premium on a phone: crisp text, nothing smeared, blurry or low-resolution.

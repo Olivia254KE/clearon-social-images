@@ -6,15 +6,23 @@ of format data. Treat everything below as "keep current mix" unless it says othe
 ## OWNER FEEDBACK, 28 Nov 2026 (standing rules: keep this section in every weekly rewrite)
 - Real photography first: the owner wants hyper-realistic, REAL images of port and shipping work (ships, containers,
   cranes, container trucks, yards, air cargo, clearance paperwork), not text-heavy designs with drawn illustrations.
-  Use photos from brand/backgrounds/ as the main visual of Posters A/B and most cards whenever any exist (text on a
-  brand panel or dark overlay; vary the photo; log which photo each asset used). Vet every photo: no faces, no readable
-  shipping-line/airline/courier logos.
+  Use photos from brand/backgrounds/ as the main visual of Posters A/B and most cards (text on a brand panel or dark
+  overlay; vary the photo; log which photo each asset used).
+- Photo rule (owner, 28 Nov): shipping lines (Maersk, MSC, CMA CGM, ONE...), airlines, terminal operators and
+  equipment brands MAY appear: they are the industry. NOT allowed: recognisable faces, and any other logistics,
+  clearing, forwarding, courier or ground-handling company (DHL, UPS, FedEx, Kuehne+Nagel, DSV, Bollore, Menzies...).
 - Never use AI-generated images or anything that imitates a photo. No grid/blueprint line textures. No blurred copy of
   the poster as a background (Stories: native 9:16 layout, or the poster 1:1 on a clean navy gradient).
-- Photo library: brand/backgrounds/ (12 vetted Unsplash photos, credits in brand/backgrounds/CREDITS.md). The owner
+- LANES (owner, 28 Nov): Clearon clears and forwards cargo from ANY country. China and India are the main lanes but
+  should be about half the content, not all of it. Rotate in Dubai/UAE, UK, USA, Europe (Italy, Switzerland air),
+  South Korea, transit to Uganda/Rwanda/DRC through Mombasa, exports from Kenya, and origin-neutral clearing posts.
+  The content plan doc has a new "Owner direction, 28 Nov 2026" section with the website pages for each lane.
+  CTAs: "from China, India, Dubai, the UK, the US, Europe or anywhere else". The website says Clearon coordinates
+  final delivery or pickup after clearance, so "cleared and delivered" wording is allowed.
+- Photo library: brand/backgrounds/ (37 vetted Unsplash photos, credits in brand/backgrounds/CREDITS.md). The owner
   has allowed images.unsplash.com and images.pexels.com, so runs may add more: free Unsplash/Pexels licence only
-  (never Unsplash+ or Getty), check every photo at full resolution (crop it) for faces and ANY readable company,
-  shipping-line, terminal, airline or equipment brand (most port photos fail this), add a CREDITS.md line, and
+  (never Unsplash+ or Getty), check every photo at full resolution (crop it) for faces and faces and the forbidden
+  company types above, add a CREDITS.md line, and
   have the reviewer re-check it. Wanted next: container truck on a road, cargo plane loading, warehouse, Mombasa-like port.
   Never use other workarounds to reach blocked sites. First example in the new style: posters/2026-11-30_b_talk-first_v2.jpg.
 - Videos must be as sharp as the stills: use tools/make_video.py as it is now (posters placed 1:1, clean navy frame,

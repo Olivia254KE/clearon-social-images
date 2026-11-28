@@ -478,3 +478,30 @@ Owner said: images are too text-heavy; use hyper-realistic real photos (truck, c
 ## Owner direction (live session, 28 Nov 2026 ~16:30): photo rule relaxed + worldwide lanes
 - Photo rule: shipping lines, airlines, terminal operators and equipment brands are fine in photos; still banned: faces and other logistics/clearing/forwarding/courier/ground-handling brands. Re-vetted: 25 more photos added (library now 37, see brand/backgrounds/CREDITS.md). Still rejected: UPS, Menzies and Hudson General (ground handler) shots, an HDR yard shot, an amateur truck snapshot, warehouse shots with operators, US tax forms.
 - Lanes: Clearon forwards and clears cargo from any country (website: international-freight-air-sea, Dubai, UK, USA, Italy, Switzerland air, South Korea, transit to Uganda/Rwanda/DRC, clearing-forwarding-services). Content plan doc updated with an "Owner direction, 28 Nov 2026" section; aim for about half China/India and half other lanes and origin-neutral posts. The website says Clearon coordinates final delivery or pickup, so "cleared and delivered" wording is allowed.
+
+## Assets made in run 2026-11-28 14:51 (photo-led, per owner direction of 28 Nov)
+- 29 E v2 `posters/2026-11-29_e_this-or-that-restock_v2.jpg`: same copy as 29 E (FCL vs LCL this-or-that). Photo: containers-teal-sky_01 (full-bleed); two navy option cards. Replaces the grid-texture version. QA: pass.
+- 30 A v2 `posters/2026-11-30_a_cbm-count_v2.jpg`: same CBM copy and arithmetic as 30 A. Photo: container-doors_03 (top), plus a big-number navy panel. Replaces the blueprint version. QA: fixed (round 1: the warehouse-racks_01 forklift crop looked like a snapshot, so the photo was swapped and the intro line put on a panel; round 2: pass once 30 C changed photo).
+- 30 A video `posters/videos/2026-11-30_a_cbm-count.mp4` (+ _cover.jpg): seed 20261130; STYLE transitions=split,wipe mood=ambient; --slide-seconds 7; --backdrop container-doors_03; 13.6 s; THUMBNAIL_OFFSET_MS=5100. QA: fixed (re-rendered with the new poster).
+- 30 C `posters/2026-11-30_c_transit-uganda.jpg`: DID YOU KNOW, "Bound for Uganda? It moves as transit cargo." Lane: transit (Uganda). Photo: trucks-aerial_01 (top, diagonal navy band). Fact from container-transit-to-uganda-through-mombasa/ (customs transit arrangements, not an import for home consumption in Kenya; we coordinate KRA transit clearance and the truck). QA: fixed (round 2: container-trailer-sky_01 looked too much like 30 A, swapped to trucks-aerial_01 with a logo scrim).
+- 30 D `posters/2026-11-30_d_question-dubai.jpg`: QUESTION OF THE DAY, "What's on your next order from Dubai?" Lane: Dubai. Photo: port-dusk-ships_01 (top) on a light lower panel with a 4-icon strip (electronics, spare parts, home appliances, textiles and fashion, from shipping-from-dubai-to-kenya/). QA: fixed (round 1: layout repeated 27 E and the photo was too dark, so it was rebuilt; round 2: logo scrim).
+- 1 Dec A `posters/2026-12-01_a_two-gateways.jpg`: "Air from China? Pick your gateway." CAN vs HKG cards. Lane: China air. Photo: air-night-apron_01. Facts from air-freight-china-to-kenya-guangzhou-hong-kong/. QA: pass.
+- 1 Dec B `posters/2026-12-01_b_any-origin.jpg`: CTA "Buying from abroad? We'll bring it home." with origin chips (China, India, Dubai, UK, USA, Europe, anywhere else), air/sea/clearance lines, a "Send us" box and a teal WhatsApp bar. Lane: worldwide. Photo: harbour-cranes-wide_01 on a white panel. Facts from international-freight-air-sea/. QA: fixed (round 1: navy scrim behind the logo).
+- Story B 29 `posters/stories/2026-11-29_b_three-papers_story.jpg`: poster 1:1 at y=250–1600 on greyscale docs-files_01 with a navy overlay, plus a "Tap the link to send us your drafts on WhatsApp" cue. QA: fixed (round 1: the bands were too dark and the rules floated).
+- 29 B video v3 `posters/videos/2026-11-29_b_three-papers_v3.mp4` (+ _cover.jpg): v2 re-rendered with a docs-files_01 backdrop (reviewer: the flat navy bands looked unfinished); wipe_up/piano; offset 5100. QA: pass.
+- Reused, re-checked: 29 D term-transshipment, 30 B talk-first_v2. QA: pass.
+
+## Scheduled this run (2026-11-28 14:51)
+Push check: OK (detached HEAD → main = origin/main; dry-run "Everything up-to-date"). Metricool not used. Claude Docs plan read (Week 3 Tue 1 Dec = air via Guangzhou Baiyun / Hong Kong). Clearon pages read via curl this run: container-transit-to-uganda-through-mombasa, shipping-from-dubai-to-kenya, air-freight-china-to-kenya-guangzhou-hong-kong, international-freight-air-sea.
+Quality gate: 9 new assets (6 images, 1 story, 2 videos) + 2 reused + 17 captions; independent reviewer agent, 3 rounds. First time: 29 E v2, 1 Dec A, 29 D, 30 B v2, 30 C (copy) and 15 captions passed. Fixed as listed above; captions FB 30 C (an unsourced sentence removed) and FB 30 B ("Many clearance problems..."). Nothing dropped.
+Failures: none in the last 48 h on either account.
+Buffer 2 (IG 6→10, TikTok 7→10, Threads 7→10):
+- Instagram 29 Nov 13:00: D term-transshipment; 18:00: B three-papers_v3 REEL (offset 5100); 18:30: Story B (sticker wa.me); 20:30: E restock_v2
+- TikTok 30 Nov 07:30: A cbm-count VIDEO (split/ambient, offset 5100); 10:00: C transit-uganda; 13:00: D question-dubai
+- Threads 30 Nov 07:30: A cbm-count_v2 (UTM threads _a); 10:00: C (UTM _c → container-transit-to-uganda-through-mombasa/); 13:00: D (UTM _d → shipping-from-dubai-to-kenya/)
+Buffer (X 7→10, Facebook 8→10, LinkedIn 8→10):
+- X 30 Nov 12:00: C; 17:00: B talk-first_v2 (UTM x _b); 20:00: D
+- Facebook 30 Nov 17:00: C; 20:00: B talk-first_v2
+- LinkedIn 1 Dec 13:00: A two-gateways (UTM linkedin 2026-12-01_a); 17:00: B any-origin (UTM _b → international-freight-air-sea/)
+Swapped into already-scheduled posts (new files; old files untouched): 30 A v2 on X 30 10:30, FB 30 13:00, LinkedIn 30 13:00; 29 E v2 on Threads and TikTok 29 20:30; 29 B video v3 on TikTok 29 18:00.
+Still to do: IG from 30 Nov 07:30 (A reel cbm-count, Story A 30, C, D, B reel talk-first, Story B 30, E); TikTok/Threads 30 18:00 (B) and 20:30 (E); 30 E card; 30 B video and stories; X/FB 1 Dec; the rest of the 1 Dec set (C/D/E, videos, stories).
